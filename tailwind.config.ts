@@ -7,12 +7,17 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "24px",
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+
       colors: {
 
         'dark-blue-05' : '#090F2C',
@@ -34,9 +39,20 @@ const config: Config = {
         'light-orange-01' : '#FFC286',
 
         'light-gray-01' : '#E5E9EC',
-
-        
       },
+      gridTemplateColumns: {
+        'boxes-width': 'repeat(10, 200px)',
+        'boxes-height': 'repeat(7, 200px)',
+        'boxes-width-md': 'repeat(10, 150px)',
+        'boxes-height-md': 'repeat(7, 150px)',
+        'boxes-sm-width': 'repeat(10, 125px)',
+        'boxes-sm-height': 'repeat(7, 125px)',
+      },
+      fontFamily: {
+        oswald: ['Oswald'],
+        lato: ['Lato'],
+      },
+
     },
   },
   plugins: [],
