@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: "Jun Mar Manuel - Portfolio",
   description: "Hi, Nice to meet you! I am Jun Mar Manuel. A skilled front end developer and currently working awesome projects at Greydient Lab",
   icons: {
-    icon: '/assets/logoooo.svg',
-    shortcut: '/assets/logoooo.svg',
-    apple: '/assets/logoooo.svg',
+    icon: '/logoooo.svg',
+    shortcut: '/logoooo.svg',
+    apple: '/logoooo.svg',
     other: {
       rel: 'apple-touch-icon-precomposed',
-      url: '/assets/logoooo.svg',
+      url: '/logoooo.svg',
     } },
     twitter: {
       card: 'app',
