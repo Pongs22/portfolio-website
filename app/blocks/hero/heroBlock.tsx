@@ -22,7 +22,7 @@ function HeroBlock( {
           </div>
           <div className="image-container translate-y-[65px] max-w-[1144px] mx-auto">
             <Image
-              src='/assets/saaaaample.png'
+              src='/assets/hero-featured-img.png'
               alt='hero-image'
               width={1200}
               height={900}

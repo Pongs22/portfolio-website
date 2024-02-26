@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter( { subsets: ["latin"] } );
 
 export const metadata: Metadata = {
   title: "Jun Mar Manuel - Portfolio",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     } },
     twitter: {
       card: 'app',
-      title: 'Jun Mar Manuel - Portfolio',
+      title: 'Jun Mar Manuels - Portfolio',
       description: 'Hi, Nice to meet you! I am Jun Mar Manuel. A skilled front end developer and currently working awesome projects at Greydient Lab',
       siteId: '1467726470533754880',
       creator: 'jM',
@@ -41,11 +41,11 @@ export const metadata: Metadata = {
     },
 };
 
-export default function RootLayout({
+export default function RootLayout( {
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}> ) {
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
