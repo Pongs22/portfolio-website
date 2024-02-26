@@ -1,10 +1,6 @@
 "use client"
 
 import React, { useEffect, useState } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
-gsap.registerPlugin( ScrollTrigger );
 import Image from 'next/image'
 
 function SkillsBlock( {
