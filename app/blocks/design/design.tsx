@@ -15,7 +15,7 @@ function DesignBlock( {
         <div className="container relative z-10">
             <div className="text-container">
                 <h4 className='font-oswald text-[30px] tracking-[1.5px] text-dark-blue-05' >OTHER WORKS</h4>
-                <p className='text-dark-blue-05 font-lato text-[20px] w-[557px]'>Each project represents a unique challenge I've tackled, combining creativity, attention to detail, and a user-centric approach.</p>
+                <p className='text-dark-blue-05 font-lato text-[20px] w-[557px]'>Each project represents a unique challenge I&apos;ve tackled, combining creativity, attention to detail, and a user-centric approach.</p>
             </div>
             <div className="works-container grid grid-cols-1 lg:grid-cols-2 gap-6 mt-[29px] ">
                 <div className=" bg-light-orange-05 h-[558px] rounded-[8px]">asdf</div>
