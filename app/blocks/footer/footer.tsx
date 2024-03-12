@@ -18,7 +18,7 @@ function FooterBlock( {
                             alt='hero-image'
                             width={70}
                             height={60}
-                            className=' my-auto w-[50px] h-[40px] md:w-full md:h-full'
+                            className=' my-auto w-full h-full'
                         />
 
                     </div>

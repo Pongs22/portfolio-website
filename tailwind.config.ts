@@ -53,7 +53,7 @@ const config: Config = {
         lato: ['Lato'],
       },
       animation: {
-        'spin-slow': 'spin 120s linear infinite',
+        'spin-slow': 'spin 300s linear infinite',
       }
 
     },

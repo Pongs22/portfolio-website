@@ -31,7 +31,7 @@ function WorksBlock( {
                 container.appendChild( star );
                 setTimeout( () => {
                     star.remove();
-                }, 1000 ); // Remove the star after 2 seconds
+                }, 1200 ); 
             };
 
             let prevMouseX = 0;
@@ -42,9 +42,10 @@ function WorksBlock( {
                 const { clientX, clientY } = event;
                 const distance = Math.sqrt( ( clientX - prevMouseX ) ** 2 + ( clientY - prevMouseY ) ** 2 );
                 totalDistance += distance;
-                while ( totalDistance >= 50 ) {
+                while ( totalDistance >= 100 ) {
                     createStar( clientX, clientY );
-                    totalDistance -= 50;
+                    createStar( clientX, clientY );
+                    totalDistance -= 100;
                 }
                 prevMouseX = clientX;
                 prevMouseY = clientY;

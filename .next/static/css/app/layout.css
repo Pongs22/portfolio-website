@@ -751,6 +751,9 @@ video {
 .h-\[40px\] {
   height: 40px;
 }
+.h-full {
+  height: 100%;
+}
 .h-screen {
   height: 100vh;
 }
@@ -799,7 +802,7 @@ video {
   }
 }
 .animate-spin-slow {
-  animation: spin 120s linear infinite;
+  animation: spin 300s linear infinite;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1180,15 +1183,15 @@ body {
 }
 
 .star {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: white;
   position: fixed;
   top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
   animation: fall-2 ;
-  animation-duration: 1500ms;
+  animation-duration: 1300ms;
   animation-fill-mode: forwards;
 }
 
@@ -1487,5 +1490,9 @@ body {
 
 .\[\&\>li\]\:text-\[14px\]>li {
   font-size: 14px;
+}
+
+.\[\&\>svg\:first-child\]\:hidden>svg:first-child {
+  display: none;
 }
 
