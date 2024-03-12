@@ -8,156 +8,24 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin( ScrollTrigger );
 function QouteBlock( {
 } ) {
+    function shuffleArray( array: string[] ) {
+        for ( let i = array.length - 1; i > 0; i-- ) {
+            const j = Math.floor( Math.random() * ( i + 1 ) );
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+    
     function hideBox() {
-
-        gsap.to( '#box-1', { opacity: 0, delay: .1, duration: .1 } );
-        gsap.to( '#box-6', { opacity: 0, delay: .2, duration: .1 } );
-        gsap.to( '#box-0', { opacity: 0, delay: .3, duration: .1 } );
-        gsap.to( '#box-4', { opacity: 0, delay: .4, duration: .1 } );
-        gsap.to( '#box-8', { opacity: 0, delay: .5, duration: .1 } );
-        gsap.to( '#box-2', { opacity: 0, delay: .6, duration: .1 } );
-        gsap.to( '#box-3', { opacity: 0, delay: .7, duration: .1 } );
-        gsap.to( '#box-9', { opacity: 0, delay: .8, duration: .1 } );
-        gsap.to( '#box-5', { opacity: 0, delay: .9, duration: .1 } );
-        gsap.to( '#box-7', { opacity: 0, delay: 1, duration: .1 } );
+        const boxIds = Array.from( { length: 50 }, ( _, index ) => `#box-${ index }` );
+        shuffleArray( boxIds );
+    
+        boxIds.forEach( ( boxId, index ) => {
+            gsap.to( boxId, { opacity: 0, delay: index * 0.02, duration: 0.1 } );
+        } );
     }
-
-    function showBox() {
-
-        gsap.to( '#box-1', { opacity: 1, delay: .1, duration: .1 } );
-        gsap.to( '#box-6', { opacity: 1, delay: .2, duration: .1 } );
-        gsap.to( '#box-0', { opacity: 1, delay: .3, duration: .1 } );
-        gsap.to( '#box-4', { opacity: 1, delay: .4, duration: .1 } );
-        gsap.to( '#box-8', { opacity: 1, delay: .5, duration: .1 } );
-        gsap.to( '#box-2', { opacity: 1, delay: .6, duration: .1 } );
-        gsap.to( '#box-3', { opacity: 1, delay: .7, duration: .1 } );
-        gsap.to( '#box-9', { opacity: 1, delay: .8, duration: .1 } );
-        gsap.to( '#box-5', { opacity: 1, delay: .9, duration: .1 } );
-        gsap.to( '#box-7', { opacity: 1, delay: 1, duration: .1 } );
-
-    }
-
-    function hideBox2() {
-
-        gsap.to( '#box-14', { opacity: 0, delay: .1, duration: .1 } );
-        gsap.to( '#box-18', { opacity: 0, delay: .2, duration: .1 } );
-        gsap.to( '#box-16', { opacity: 0, delay: .3, duration: .1 } );
-        gsap.to( '#box-11', { opacity: 0, delay: .4, duration: .1 } );
-        gsap.to( '#box-17', { opacity: 0, delay: .5, duration: .1 } );
-        gsap.to( '#box-10', { opacity: 0, delay: .6, duration: .1 } );
-        gsap.to( '#box-19', { opacity: 0, delay: .7, duration: .1 } );
-        gsap.to( '#box-12', { opacity: 0, delay: .8, duration: .1 } );
-        gsap.to( '#box-13', { opacity: 0, delay: .9, duration: .1 } );
-        gsap.to( '#box-15', { opacity: 0, delay: 1, duration: .1 } ) ;
-    }
-
-    function showBox2() {
-
-        gsap.to( '#box-14', { opacity: 1, delay: .1, duration: .1 } );
-        gsap.to( '#box-18', { opacity: 1, delay: .2, duration: .1 } );
-        gsap.to( '#box-16', { opacity: 1, delay: .3, duration: .1 } );
-        gsap.to( '#box-11', { opacity: 1, delay: .4, duration: .1 } );
-        gsap.to( '#box-17', { opacity: 1, delay: .5, duration: .1 } );
-        gsap.to( '#box-10', { opacity: 1, delay: .6, duration: .1 } );
-        gsap.to( '#box-19', { opacity: 1, delay: .7, duration: .1 } );
-        gsap.to( '#box-12', { opacity: 1, delay: .8, duration: .1 } );
-        gsap.to( '#box-13', { opacity: 1, delay: .9, duration: .1 } );
-        gsap.to( '#box-15', { opacity: 1, delay: 1, duration: .1 } );
-
-    }
-
-    function hideBox3() {
-
-        gsap.to( '#box-22', { opacity: 0, delay: .1, duration: .1 } );
-        gsap.to( '#box-25', { opacity: 0, delay: .2, duration: .1 } );
-        gsap.to( '#box-28', { opacity: 0, delay: .3, duration: .1 } );
-        gsap.to( '#box-27', { opacity: 0, delay: .4, duration: .1 } );
-        gsap.to( '#box-26', { opacity: 0, delay: .5, duration: .1 } );
-        gsap.to( '#box-29', { opacity: 0, delay: .6, duration: .1 } );
-        gsap.to( '#box-24', { opacity: 0, delay: .7, duration: .1 } );
-        gsap.to( '#box-21', { opacity: 0, delay: .8, duration: .1 } );
-        gsap.to( '#box-23', { opacity: 0, delay: .9, duration: .1 } );
-        gsap.to( '#box-20', { opacity: 0, delay: 1, duration: .1 } ) ;
-    }
-
-    function showBox3() {
-
-        gsap.to( '#box-22', { opacity: 1, delay: .1, duration: .1 } );
-        gsap.to( '#box-25', { opacity: 1, delay: .2, duration: .1 } );
-        gsap.to( '#box-28', { opacity: 1, delay: .3, duration: .1 } );
-        gsap.to( '#box-27', { opacity: 1, delay: .4, duration: .1 } );
-        gsap.to( '#box-26', { opacity: 1, delay: .5, duration: .1 } );
-        gsap.to( '#box-29', { opacity: 1, delay: .6, duration: .1 } );
-        gsap.to( '#box-24', { opacity: 1, delay: .7, duration: .1 } );
-        gsap.to( '#box-21', { opacity: 1, delay: .8, duration: .1 } );
-        gsap.to( '#box-23', { opacity: 1, delay: .9, duration: .1 } );
-        gsap.to( '#box-20', { opacity: 1, delay: 1, duration: .1 } );
-
-    }
-
-    function hideBox4() {
-
-        gsap.to( '#box-31', { opacity: 0, delay: .1, duration: .1 } );
-        gsap.to( '#box-39', { opacity: 0, delay: .2, duration: .1 } );
-        gsap.to( '#box-37', { opacity: 0, delay: .3, duration: .1 } );
-        gsap.to( '#box-35', { opacity: 0, delay: .4, duration: .1 } );
-        gsap.to( '#box-38', { opacity: 0, delay: .5, duration: .1 } );
-        gsap.to( '#box-36', { opacity: 0, delay: .6, duration: .1 } );
-        gsap.to( '#box-34', { opacity: 0, delay: .7, duration: .1 } );
-        gsap.to( '#box-33', { opacity: 0, delay: .8, duration: .1 } );
-        gsap.to( '#box-32', { opacity: 0, delay: .9, duration: .1 } );
-        gsap.to( '#box-30', { opacity: 0, delay: 1, duration: .1 } );
-    }
-
-    function showBox4() {
-
-        gsap.to( '#box-31', { opacity: 1, delay: .1, duration: .1 } );
-        gsap.to( '#box-39', { opacity: 1, delay: .2, duration: .1 } );
-        gsap.to( '#box-37', { opacity: 1, delay: .3, duration: .1 } );
-        gsap.to( '#box-35', { opacity: 1, delay: .4, duration: .1 } );
-        gsap.to( '#box-38', { opacity: 1, delay: .5, duration: .1 } );
-        gsap.to( '#box-36', { opacity: 1, delay: .6, duration: .1 } );
-        gsap.to( '#box-34', { opacity: 1, delay: .7, duration: .1 } );
-        gsap.to( '#box-33', { opacity: 1, delay: .8, duration: .1 } );
-        gsap.to( '#box-32', { opacity: 1, delay: .9, duration: .1 } );
-        gsap.to( '#box-30', { opacity: 1, delay: 1, duration: .1 } );
-
-    }
-
-    function hideBox5() {
-
-        gsap.to( '#box-45', { opacity: 0, delay: .1, duration: .1 } );
-        gsap.to( '#box-49', { opacity: 0, delay: .2, duration: .1 } );
-        gsap.to( '#box-47', { opacity: 0, delay: .3, duration: .1 } );
-        gsap.to( '#box-43', { opacity: 0, delay: .4, duration: .1 } );
-        gsap.to( '#box-48', { opacity: 0, delay: .5, duration: .1 } );
-        gsap.to( '#box-41', { opacity: 0, delay: .6, duration: .1 } );
-        gsap.to( '#box-40', { opacity: 0, delay: .7, duration: .1 } );
-        gsap.to( '#box-46', { opacity: 0, delay: .8, duration: .1 } );
-        gsap.to( '#box-44', { opacity: 0, delay: .9, duration: .1 } );
-        gsap.to( '#box-42', { opacity: 0, delay: 1, duration: .1 } );
-    }
-
-    function showBox5() {
-
-        gsap.to( '#box-45', { opacity: 0, delay: .1, duration: .1 } );
-        gsap.to( '#box-49', { opacity: 0, delay: .2, duration: .1 } );
-        gsap.to( '#box-47', { opacity: 0, delay: .3, duration: .1 } );
-        gsap.to( '#box-43', { opacity: 0, delay: .4, duration: .1 } );
-        gsap.to( '#box-48', { opacity: 0, delay: .5, duration: .1 } );
-        gsap.to( '#box-41', { opacity: 0, delay: .6, duration: .1 } );
-        gsap.to( '#box-40', { opacity: 0, delay: .7, duration: .1 } );
-        gsap.to( '#box-46', { opacity: 0, delay: .8, duration: .1 } );
-        gsap.to( '#box-44', { opacity: 0, delay: .9, duration: .1 } );
-        gsap.to( '#box-42', { opacity: 0, delay: 1, duration: .1 } );
-
-    }
-
-
 
     useEffect( () => {
 
-        showBox();
         gsap.to( '.jm-b-qoute-block', {
             scrollTrigger: {
                 trigger: '.jm-b-qoute-block',
@@ -165,50 +33,9 @@ function QouteBlock( {
                 end: 'start+=125px center+=100px',
                 scrub: 1,
                 onEnter: () => hideBox(),
-                onLeaveBack: () => showBox(),
             },
         } );
-        gsap.to( '.jm-b-qoute-block', {
-            scrollTrigger: {
-                trigger: '.jm-b-qoute-block',
-                start: 'start+=250px center+=100px',
-                end: 'start+=250px center+=100px',
-                scrub: 1,
-                onEnter: () => hideBox2(),
-                onLeaveBack: () => showBox2(),
-            },
-        } );
-        gsap.to( '.jm-b-qoute-block', {
-            scrollTrigger: {
-                trigger: '.jm-b-qoute-block',
-                start: 'start+=375px center+=100px',
-                end: 'start+=375px center+=100px',
-                scrub: 1,
-                onEnter: () => hideBox3(),
-                onLeaveBack: () => showBox3(),
-            },
-        } );
-        gsap.to( '.jm-b-qoute-block', {
-            scrollTrigger: {
-                trigger: '.jm-b-qoute-block',
-                start: 'start+=500px center+=100px',
-                end: 'start+=500px center+=100px',
-                scrub: 1,
-                onEnter: () => hideBox4(),
-                onLeaveBack: () => showBox4(),
-            },
-        } );
-        gsap.to( '.jm-b-qoute-block', {
-            scrollTrigger: {
-                trigger: '.jm-b-qoute-block',
-                start: 'start+=625px center+=100px',
-                end: 'start+=625px center+=100px',
-                scrub: 1,
-                onEnter: () => hideBox5(),
-                onLeaveBack: () => showBox5(),
-            },
-        } );
-    }, [] );
+    } );
     return (
         <>
             <div className='jm-b-qoute-block bg-dark-blue-05 relative overflow-hidden'>

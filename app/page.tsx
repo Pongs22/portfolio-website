@@ -5,9 +5,7 @@ import NavigationBar from "./blocks/header/headerBlock";
 import SkillsBlock from "./blocks/skills/skillsBlock";
 import WorksBlock from "./blocks/works/works";
 import FooterBlock from "./blocks/footer/footer";
-import Head from "next/head";
-import DesignBlock from "./blocks/design/design";
-import QouteBlock from "./blocks/qoute/qoute";
+
 
 export default function Home() {
   return (
@@ -17,8 +15,6 @@ export default function Home() {
       <HeroBlock/>
       <SkillsBlock/>
       <WorksBlock/>
-      <DesignBlock/>
-      <QouteBlock/>
       <FooterBlock />
     </main>
     </>

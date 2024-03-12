@@ -18,11 +18,11 @@ function SkillsBlock( {
                             <p className='text-dark-blue-05 mt-4 font-lato text-[20px] tracking-[0.4px]'>I&apos;m Jun Mar Manuel, a skilled front-end developer with a passion for creating clean and user-friendly websites. I specialize in creating visually appealing designs with a focus on functionality and accessibility.</p>
                             <ul className=' mt-4 relative'>
                                 <li className={`absolute top-0 hello ${hovered1 ? ' opacity-100' : ' opacity-0 '} transform transition-all`} id='image-1'>
-                                    <ul className='flex gap-x-4'>
+                                    <ul className='flex gap-4 flex-wrap'>
                                     <li>
                                         <Image
-                                    src='/assets/skills-icon1.svg'
-                                    alt='hero-image'
+                                    src='/assets/css-icon.svg'
+                                    alt='css-icon'
                                     width={70}
                                     height={70}
                                     className=''
@@ -30,8 +30,8 @@ function SkillsBlock( {
                                         </li>
                                         <li>
                                         <Image
-                                    src='/assets/skills-icon1.svg'
-                                    alt='hero-image'
+                                    src='/assets/html-icon.svg'
+                                    alt='html-icon'
                                     width={70}
                                     height={70}
                                     className=''
@@ -39,8 +39,53 @@ function SkillsBlock( {
                                         </li>
                                         <li>
                                         <Image
-                                    src='/assets/skills-icon1.svg'
-                                    alt='hero-image'
+                                    src='/assets/js-icon.svg'
+                                    alt='js-icon'
+                                    width={70}
+                                    height={70}
+                                    className=''
+                                />
+                                        </li>
+                                        <li>
+                                        <Image
+                                    src='/assets/php-icon.svg'
+                                    alt='php-icon'
+                                    width={70}
+                                    height={70}
+                                    className=''
+                                />
+                                        </li>
+                                        <li>
+                                        <Image
+                                    src='/assets/react-icon.svg'
+                                    alt='react-icon'
+                                    width={70}
+                                    height={70}
+                                    className=''
+                                />
+                                        </li>
+                                        <li>
+                                        <Image
+                                    src='/assets/sass-icon.svg'
+                                    alt='sass-icon'
+                                    width={70}
+                                    height={70}
+                                    className=''
+                                />
+                                        </li>
+                                        <li>
+                                        <Image
+                                    src='/assets/nextjs-icon.svg'
+                                    alt='nextjs-icon'
+                                    width={70}
+                                    height={70}
+                                    className=''
+                                />
+                                        </li>
+                                        <li>
+                                        <Image
+                                    src='/assets/tailwind-icon.svg'
+                                    alt='tailwind-icon'
                                     width={70}
                                     height={70}
                                     className=''
@@ -52,7 +97,7 @@ function SkillsBlock( {
                                     <ul className='flex gap-x-4'>
                                     <li>
                                         <Image
-                                    src='/assets/skill-icon2.svg'
+                                    src='/assets/acf-icon.svg'
                                     alt='hero-image'
                                     width={70}
                                     height={70}
@@ -61,7 +106,7 @@ function SkillsBlock( {
                                         </li>
                                         <li>
                                         <Image
-                                    src='/assets/skill-icon2.svg'
+                                    src='/assets/graphql-icon.svg'
                                     alt='hero-image'
                                     width={70}
                                     height={70}
@@ -70,7 +115,7 @@ function SkillsBlock( {
                                         </li>
                                         <li>
                                         <Image
-                                    src='/assets/skill-icon2.svg'
+                                    src='/assets/wp-icon.svg'
                                     alt='hero-image'
                                     width={70}
                                     height={70}
@@ -84,25 +129,7 @@ function SkillsBlock( {
                                     <ul className='flex gap-x-4'>
                                     <li>
                                         <Image
-                                    src='/assets/skill-icon3.svg'
-                                    alt='hero-image'
-                                    width={70}
-                                    height={70}
-                                    className=''
-                                />
-                                        </li>
-                                        <li>
-                                        <Image
-                                    src='/assets/skill-icon3.svg'
-                                    alt='hero-image'
-                                    width={70}
-                                    height={70}
-                                    className=''
-                                />
-                                        </li>
-                                        <li>
-                                        <Image
-                                    src='/assets/skill-icon3.svg'
+                                    src='/assets/figma-icons.svg'
                                     alt='hero-image'
                                     width={70}
                                     height={70}
@@ -128,7 +155,7 @@ function SkillsBlock( {
                             </li>
                             <li className='text-dark-blue-05 skills' id='li-2' onMouseEnter={( ) => sethovered2( true )} onMouseLeave={( ) => sethovered2( false )}>
                                 <Image
-                                    src='/assets/skills-icon1.svg'
+                                    src='/assets/skill-icon2.svg'
                                     alt='hero-image'
                                     width={70}
                                     height={70}
@@ -139,7 +166,7 @@ function SkillsBlock( {
                             </li>
                             <li className='text-dark-blue-05 skills' id='li-3' onMouseEnter={( ) => sethovered3( true )} onMouseLeave={( ) => sethovered3( false )}>
                                 <Image
-                                    src='/assets/skills-icon1.svg'
+                                    src='/assets/skill-icon3.svg'
                                     alt='hero-image'
                                     width={70}
                                     height={70}

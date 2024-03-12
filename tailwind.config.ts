@@ -52,6 +52,9 @@ const config: Config = {
         oswald: ['Oswald'],
         lato: ['Lato'],
       },
+      animation: {
+        'spin-slow': 'spin 120s linear infinite',
+      }
 
     },
   },
