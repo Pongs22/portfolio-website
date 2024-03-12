@@ -732,6 +732,12 @@ video {
 .mt-\[80px\] {
   margin-top: 80px;
 }
+.mt-10 {
+  margin-top: 2.5rem;
+}
+.mt-20 {
+  margin-top: 5rem;
+}
 .block {
   display: block;
 }
@@ -1438,10 +1444,6 @@ body {
     width: 900px;
   }
 
-  .lg\:w-full {
-    width: 100%;
-  }
-
   .lg\:max-w-\[557px\] {
     max-width: 557px;
   }
@@ -1490,9 +1492,5 @@ body {
 
 .\[\&\>li\]\:text-\[14px\]>li {
   font-size: 14px;
-}
-
-.\[\&\>svg\:first-child\]\:hidden>svg:first-child {
-  display: none;
 }
 

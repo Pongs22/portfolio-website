@@ -2,22 +2,11 @@
 
 import Image from 'next/image'
 import React, { useEffect, useRef } from 'react';
-import lottie from 'lottie-web';
-import animationData from '../../../public/assets/featured-image.json';
+import Lottie from "lottie-react";
+import groovyWalkAnimation from "../../../public/assets/featured-image.json";
 
-function HeroBlock( {
+function HeroBlock ( {
 } ) {
-  const container = useRef( null );
-
-  useEffect( () => {
-    const anim = lottie.loadAnimation( {
-      container: container.current,
-      animationData: animationData,
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-    } );
-  }, [] );
   return (
     <>
       <div className='jm-b-hero-sections bg-dark-blue-05 flex pb-[185px] relative overflow-hidden justify-center text-center '>
@@ -35,7 +24,7 @@ function HeroBlock( {
               <button id="workshead" className='px-[47px] py-[19px] bg-light-orange-05 text-white font-oswald text-[24px] font-semibold rounded-[4px]'>View Projects</button>
             </div>
           </div>
-          <div className="lottie-container [&>svg:first-child]:hidden translate-y-[65px] max-w-[1144px] mx-auto" ref={container}></div>
+          <div className="max-w-[1144px] mx-auto mt-20"><Lottie animationData={groovyWalkAnimation} /></div>
         </div>
       </div >
     </>
