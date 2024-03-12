@@ -1,9 +1,62 @@
-import React from 'react';
+"use client"
+
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
 import Link from 'next/link';
 
 function WorksBlock( {
 } ) {
+    useEffect( () => {
+        const container = document.getElementById( 'qouteText' );
+        const color = ['/assets/id-1.svg', '/assets/id-2.svg', '/assets/id-3.svg'];
+        const fall = ['fall-1', 'fall-2', 'fall-3'];
+        const getRandomColor = () => {
+            const randomIndex = Math.floor( Math.random() * color.length );
+            const randomColor = color[randomIndex];
+            return randomColor;
+        };
+        const getRandomAnimation = () => {
+            const randomIndexes = Math.floor( Math.random() * fall.length );
+            const randomAnimation = fall[randomIndexes];
+            return randomAnimation;
+        };
+        if ( container ) {
+            const createStar = ( x: number, y: number ) => {
+                const star = document.createElement( 'span' );
+                star.className = 'star';
+                star.style.left = x + 'px';
+                star.style.top = y + 'px';
+                star.style.background = `url( ${getRandomColor()} ) center / cover no-repeat`;
+                star.style.animation = `${getRandomAnimation()} 2s ease-in-out`;
+                container.appendChild( star );
+                setTimeout( () => {
+                    star.remove();
+                }, 1000 ); // Remove the star after 2 seconds
+            };
+
+            let prevMouseX = 0;
+            let prevMouseY = 0;
+            let totalDistance = 0;
+
+            const handleMove = ( event: MouseEvent ) => {
+                const { clientX, clientY } = event;
+                const distance = Math.sqrt( ( clientX - prevMouseX ) ** 2 + ( clientY - prevMouseY ) ** 2 );
+                totalDistance += distance;
+                while ( totalDistance >= 50 ) {
+                    createStar( clientX, clientY );
+                    totalDistance -= 50;
+                }
+                prevMouseX = clientX;
+                prevMouseY = clientY;
+            };
+
+            container.addEventListener( 'mousemove', handleMove );
+
+            return () => {
+                container.removeEventListener( 'mousemove', handleMove );
+            };
+        }
+    }, [] );
     return (
         <>
             <div className='jm-b-works-section bg-dark-blue-04 py-[80px] md:py-[125px] overflow-hidden relative'>
@@ -19,7 +72,7 @@ function WorksBlock( {
                     width={800}
                     height={800}
                     className='absolute hidden md:block lg:top-[950px] z-1 animate-spin-slow -right-[200px] md:w-[550px] lg:w-[900px] md:top-[800px]' />
-                    <Image
+                <Image
                     src='/assets/third-image.svg'
                     alt='css-icon'
                     width={800}
@@ -36,7 +89,7 @@ function WorksBlock( {
                         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-4">
                             <div className="text-container col-span-2 md:col-span-1 order-2 md:order-1 md:my-auto md:max-w-[477px] mt-4 p-1">
                                 <h4 className='mb-2 lg:mb-4 font-oswald lg:text-[30px] md:text-[20px] md:tracking-[1.4px] lg:tracking-[1.5px]'>RISING WAVE (US)</h4>
-                                <div className="paragraph-wrapper p-6 bg-dark-blue-01 text-light-blue-01">
+                                <div className="paragraph-wrapper p-6 bg-dark-blue-01 text-light-blue-01 overflow-hidden">
                                     <p className='text-[12px] md:tracking-[0.12px] lg:text-[16px]'>A Distributed SQL stream processing database, simplifying real-time app development with seamless data ingestion.</p>
                                     <ul className='flex gap-x-[10px] font-lato text-[9px] lg:text-[10px] tracking-[0.1px] text-light-orange-05 mt-2'>
                                         <li>Wordpress</li>
@@ -71,7 +124,7 @@ function WorksBlock( {
                             <div className="text-container col-span-2 md:col-span-1 order-2 my-auto justify-end flex">
                                 <div className="text-container col-span-2 md:col-span-1 order-2 md:order-1 md:my-auto md:max-w-[477px] mt-4 p-1">
                                     <h4 className='mb-2 lg:mb-4 font-oswald lg:text-[30px] md:text-[20px] md:tracking-[1.4px] lg:tracking-[1.5px] md:text-end'>MINDPORT (THAILAND)</h4>
-                                    <div className="paragraph-wrapper p-6 bg-dark-blue-01 text-light-blue-01">
+                                    <div className="paragraph-wrapper p-6 bg-dark-blue-01 text-light-blue-01" >
                                         <p className='text-[12px] md:tracking-[0.12px] lg:text-[16px]'>A platform where you can share your experience, guided by friends and mentors, for a better self growth and career.</p>
                                         <ul className='flex gap-x-[10px] font-lato text-[9px] lg:text-[10px] tracking-[0.1px] text-light-orange-05 mt-2'>
                                             <li>Wordpress</li>

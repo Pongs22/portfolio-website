@@ -10,7 +10,7 @@ function FooterBlock( {
 
     return (
         <>
-            <footer className='jm-b-footer bg-dark-blue-05'>
+            <footer className='jm-b-footer bg-dark-blue-05' id='qouteText'>
                 <div className="wrapper border-b border-dark-blue-01 bg-dark-blue-05">
                     <div className="container max-w-[1144px] pt-[185px] px-[28px] pb-[32px]">
                         <Image
