@@ -88,8 +88,8 @@ function NavigationBar( {
             className='absolute top-[12px] right-[24px]'
           />
         </button>   
-        <div className="menu-wrapper absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-y-[32px]">
-          <ul className='flex flex-col gap-y-[50px] my-auto align-middle justify-center [&>li]:my-auto [&>li]:font-lato [&>li]:text-[14px]'>
+        <div className="menu-wrapper absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-y-[32px] md:hidden">
+          <ul className='flex flex-col gap-y-[50px] my-auto align-middle justify-center [&>li]:my-auto [&>li]:font-lato [&>li]:text-[14px] md:hidden'>
             <li className='flex mx-auto'><button className='tracking-[1.4px] font-bold hover:text-light-blue-05 transition-all' onClick={() => handleClick( '#works' )}>Works</button></li>
             <li className='flex mx-auto'><button className='tracking-[1.4px] font-bold hover:text-light-blue-05 transition-all' onClick={() => handleClick( '#about' )}>About</button></li>
             <li className='flex mx-auto'><button className='tracking-[1.4px] font-bold hover:text-light-blue-05 transition-all' onClick={() => handleClick( '#contact' )}>Contact Me</button></li>
