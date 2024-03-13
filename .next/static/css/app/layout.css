@@ -720,6 +720,9 @@ video {
 .left-\[17\.5\%\] {
   left: 17.5%;
 }
+.left-\[12\%\] {
+  left: 12%;
+}
 .z-10 {
   z-index: 10;
 }
@@ -829,6 +832,18 @@ video {
 }
 .-mt-20 {
   margin-top: -5rem;
+}
+.mt-\[40px\] {
+  margin-top: 40px;
+}
+.mt-0 {
+  margin-top: 0px;
+}
+.mt-\[32px\] {
+  margin-top: 32px;
+}
+.mt-\[24px\] {
+  margin-top: 24px;
 }
 .block {
   display: block;
@@ -1457,6 +1472,9 @@ video {
 .tracking-\[0\.16px\] {
   letter-spacing: 0.16px;
 }
+.tracking-\[1px\] {
+  letter-spacing: 1px;
+}
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
@@ -1670,9 +1688,29 @@ body {
   background-color: rgb(21 28 65 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-light-orange-03:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 161 69 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-light-blue-03:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(130 167 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-light-blue-04:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(92 140 255 / var(--tw-bg-opacity));
+}
+
 .hover\:text-light-blue-05:hover {
   --tw-text-opacity: 1;
   color: rgb(55 114 255 / var(--tw-text-opacity));
+}
+
+.hover\:ring-light-blue-05:hover {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(55 114 255 / var(--tw-ring-opacity));
 }
 
 .hover\:grayscale-0:hover {
@@ -1730,6 +1768,14 @@ body {
     top: 100px;
   }
 
+  .md\:left-\[10\%\] {
+    left: 10%;
+  }
+
+  .md\:left-\[7\%\] {
+    left: 7%;
+  }
+
   .md\:order-1 {
     order: 1;
   }
@@ -1779,6 +1825,10 @@ body {
 
   .md\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .md\:mt-\[32px\] {
+    margin-top: 32px;
   }
 
   .md\:block {
@@ -2050,6 +2100,10 @@ body {
   .md\:tracking-\[1\.12px\] {
     letter-spacing: 1.12px;
   }
+
+  .md\:tracking-\[1px\] {
+    letter-spacing: 1px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -2066,12 +2120,28 @@ body {
     top: 950px;
   }
 
+  .lg\:left-\[17\.5\%\] {
+    left: 17.5%;
+  }
+
   .lg\:mb-4 {
     margin-bottom: 1rem;
   }
 
   .lg\:mt-\[230px\] {
     margin-top: 230px;
+  }
+
+  .lg\:mt-4 {
+    margin-top: 1rem;
+  }
+
+  .lg\:mt-8 {
+    margin-top: 2rem;
+  }
+
+  .lg\:mt-\[48px\] {
+    margin-top: 48px;
   }
 
   .lg\:block {
@@ -2158,6 +2228,26 @@ body {
     padding-bottom: 12px;
   }
 
+  .lg\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .lg\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .lg\:px-7 {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .lg\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
   .lg\:text-\[10px\] {
     font-size: 10px;
   }
@@ -2228,6 +2318,14 @@ body {
 
   .lg\:tracking-\[0\.64px\] {
     letter-spacing: 0.64px;
+  }
+
+  .lg\:tracking-\[1\.68px\] {
+    letter-spacing: 1.68px;
+  }
+
+  .lg\:tracking-\[1\.2px\] {
+    letter-spacing: 1.2px;
   }
 }
 

@@ -9,7 +9,7 @@ function WorksBlock( {
 } ) {
 
     useEffect( () => {
-        const container = document.getElementById( 'qouteText' );
+        const container = document.getElementById( 'works' );
         const color = ['/assets/id-1.svg', '/assets/id-2.svg', '/assets/id-3.svg','/assets/blue-circ-trail.svg','/assets/blue-cross.svg','/assets/blue-dia-trail.svg','/assets/cross-orange.svg','/assets/white-circ-trail.svg','/assets/white-dia-trail.svg'];
         const fall = ['fall-1', 'fall-2', 'fall-3'];
         const getRandomColor = () => {
@@ -61,7 +61,7 @@ function WorksBlock( {
     }, [] );
     return (
         <>
-            <div className='jm-b-works-section bg-dark-blue-04 py-[80px] md:py-[125px] overflow-hidden relative' id='qouteText'>
+            <div className='jm-b-works-section bg-dark-blue-04 py-[80px] md:py-[125px] overflow-hidden relative' id='works'>
                 <Image
                     src='/assets/first-image.svg'
                     alt='css-icon'
@@ -90,7 +90,7 @@ function WorksBlock( {
                     <div className="grid grid-cols-1 md:gap-y-[245px] gap-y-[80px]">
                         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-4">
                             <div className="text-container col-span-2 md:col-span-1 order-2 md:order-1 md:my-auto md:max-w-[477px] mt-4 p-1">
-                                <h4 className='mb-2 lg:mb-4 font-oswald lg:text-[30px] md:text-[20px] md:tracking-[1.4px] lg:tracking-[1.5px]'>RISING WAVE (US)</h4>
+                                <h4 className='mb-2 lg:mb-4 font-oswald lg:text-[30px] md:text-[20px] md:tracking-[1.4px] lg:tracking-[1.5px]'>RISING WAVE</h4>
                                 <div className="paragraph-wrapper p-6 bg-dark-blue-01 text-light-blue-01 overflow-hidden">
                                     <p className='text-[12px] md:tracking-[0.12px] lg:text-[16px]'>A Distributed SQL stream processing database, simplifying real-time app development with seamless data ingestion.</p>
                                     <ul className='flex gap-x-[10px] font-lato text-[9px] lg:text-[10px] tracking-[0.1px] text-light-orange-05 mt-2'>
@@ -101,7 +101,7 @@ function WorksBlock( {
                                     </ul>
                                 </div>
                                 <div className="link-container mt-[28px] flex justify-end">
-                                    <Link href="#" className='font-lato text-[16px] tracking-[0.46px] ring-1 ring-white px-3 py-2 rounded-[4px]'>View Website</Link>
+                                    <Link href="https://risingwave.com" target='_blank' className='font-lato text-[16px] tracking-[0.46px]  ring-1 ring-white text-white hover:ring-light-blue-05 hover:text-light-blue-05 transform transition-all px-3 py-2 rounded-[4px]'>View Website</Link>
                                 </div>
                             </div>
                             <div className="text-container col-span-2 md:col-span-1 order-1 md:order-2 justify-end flex relative">
@@ -131,7 +131,7 @@ function WorksBlock( {
                         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-4">
                             <div className="text-container col-span-2 md:col-span-1 order-2 my-auto justify-end flex">
                                 <div className="text-container col-span-2 md:col-span-1 order-2 md:order-1 md:my-auto md:max-w-[477px] mt-4 p-1">
-                                    <h4 className='mb-2 lg:mb-4 font-oswald lg:text-[30px] md:text-[20px] md:tracking-[1.4px] lg:tracking-[1.5px] md:text-end'>MINDPORT (THAILAND)</h4>
+                                    <h4 className='mb-2 lg:mb-4 font-oswald lg:text-[30px] md:text-[20px] md:tracking-[1.4px] lg:tracking-[1.5px] md:text-end'>MINDPORT</h4>
                                     <div className="paragraph-wrapper p-6 bg-dark-blue-01 text-light-blue-01" >
                                         <p className='text-[12px] md:tracking-[0.12px] lg:text-[16px]'>A platform where you can share your experience, guided by friends and mentors, for a better self growth and career.</p>
                                         <ul className='flex gap-x-[10px] font-lato text-[9px] lg:text-[10px] tracking-[0.1px] text-light-orange-05 mt-2'>
@@ -142,7 +142,7 @@ function WorksBlock( {
                                         </ul>
                                     </div>
                                     <div className="link-container mt-[28px] flex justify-end md:justify-start">
-                                        <Link href="#" className='font-lato text-[16px] tracking-[0.46px] ring-1 ring-white px-3 py-2 rounded-[4px]'>View Website</Link>
+                                        <Link href="https://mindportjourney.com" target='_blank' className='font-lato text-[16px] tracking-[0.46px] ring-1 ring-white px-3 py-2 rounded-[4px] text-white hover:ring-light-blue-05 hover:text-light-blue-05 transform transition-all'>View Website</Link>
                                     </div>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@ function WorksBlock( {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-4">
                             <div className="text-container col-span-2 md:col-span-1 order-2 md:order-1 md:my-auto md:max-w-[477px] mt-4 p-1">
-                                <h4 className='mb-2 lg:mb-4 font-oswald lg:text-[30px] md:text-[20px] md:tracking-[1.4px] lg:tracking-[1.5px]'>LOBY (SINGAPORE)</h4>
+                                <h4 className='mb-2 lg:mb-4 font-oswald lg:text-[30px] md:text-[20px] md:tracking-[1.4px] lg:tracking-[1.5px]'>LOBY</h4>
                                 <div className="paragraph-wrapper p-6 bg-dark-blue-01 text-light-blue-01">
                                     <p className='text-[12px] md:tracking-[0.12px] lg:text-[16px]'>An efficient building management system to enhance residents’ experience with intuitive and smart solutions.</p>
                                     <ul className='flex gap-x-[10px] font-lato text-[9px] lg:text-[10px] tracking-[0.1px] text-light-orange-05 mt-2'>
@@ -182,7 +182,7 @@ function WorksBlock( {
                                     </ul>
                                 </div>
                                 <div className="link-container mt-[28px] flex justify-end">
-                                    <Link href="#" className='font-lato text-[16px] tracking-[0.46px] ring-1 ring-white px-3 py-2 rounded-[4px]'>View Website</Link>
+                                    <Link href="https://www.loby.tech" target='_blank' className='font-lato text-[16px] tracking-[0.46px] ring-1 ring-white px-3 py-2 rounded-[4px] text-white hover:ring-light-blue-05 hover:text-light-blue-05 transform transition-all'>View Website</Link>
                                 </div>
                             </div>
                             <div className="text-container col-span-2 md:col-span-1 order-1 md:order-2 justify-end flex relative">

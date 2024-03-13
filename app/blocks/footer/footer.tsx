@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
 import Link from 'next/link';
 
@@ -7,17 +7,69 @@ function FooterBlock( {
 } ) {
     const currentYear = new Date().getFullYear();
 
+    useEffect( () => {
+        const container = document.getElementById( 'contact' );
+        const color = ['/assets/id-1.svg', '/assets/id-2.svg', '/assets/id-3.svg','/assets/blue-circ-trail.svg','/assets/blue-cross.svg','/assets/blue-dia-trail.svg','/assets/cross-orange.svg','/assets/white-circ-trail.svg','/assets/white-dia-trail.svg'];
+        const fall = ['fall-1', 'fall-2', 'fall-3'];
+        const getRandomColor = () => {
+            const randomIndex = Math.floor( Math.random() * color.length );
+            const randomColor = color[randomIndex];
+            return randomColor;
+        };
+        const getRandomAnimation = () => {
+            const randomIndexes = Math.floor( Math.random() * fall.length );
+            const randomAnimation = fall[randomIndexes];
+            return randomAnimation;
+        };
+        if ( container ) {
+            const createStar = ( x: number, y: number ) => {
+                const star = document.createElement( 'span' );
+                star.className = 'star';
+                star.style.left = x + 'px';
+                star.style.top = y + 'px';
+                star.style.background = `url( ${getRandomColor()} ) center / cover no-repeat`;
+                star.style.animation = `${getRandomAnimation()} 2s ease-in-out`;
+                container.appendChild ( star );
+                setTimeout( () => {
+                    star.remove();
+                }, 1200 );
+            };
+
+            let prevMouseX = 0;
+            let prevMouseY = 0;
+            let totalDistance = 0;
+
+            const handleMove = ( event: MouseEvent ) => {
+                const { clientX, clientY } = event;
+                const distance = Math.sqrt( ( clientX - prevMouseX ) ** 2 + ( clientY - prevMouseY ) ** 2 );
+                totalDistance += distance;
+                while ( totalDistance >= 25 ) {
+                    createStar( clientX, clientY );
+                    totalDistance -= 25;
+                }
+                prevMouseX = clientX;
+                prevMouseY = clientY;
+            };
+
+            container.addEventListener( 'mousemove', handleMove );
+
+            return () => {
+                container.removeEventListener( 'mousemove', handleMove );
+            };
+        }
+    }, [] );
+
     return (
         <>
             <footer className='jm-b-footer bg-dark-blue-05 relative z-10'>
-                <div className="contact-section-wrapper container max-w-[1144px]">
-                    <div className="content text-center md:text-start flex flex-col gap-y-2 md:flex-row justify-between bg-dark-blue-01 mt-[-80px] md:mt-[-125px] py-5 px-8 md:p-[40px] lg:py-[76px] lg:px-[97px]">
+                <div className="contact-section-wrapper container max-w-[1144px]" >
+                    <div id='contact' className="content text-center md:text-start flex flex-col gap-y-2 md:flex-row justify-between bg-dark-blue-01 mt-[-80px] md:mt-[-125px] py-5 px-8 md:p-[40px] lg:py-[76px] lg:px-[97px]">
                         <div className="text-container lg:max-w-[461px] md:max-w-[419px] max-w-[351px] mx-auto md:mx-0">
                             <h2 className='font-oswald text-[20px] leading-[18.24px] tracking-[0.32px] md:text-[28px] md:leading-[25.536px] md:tracking-[0.44px] lg:text-[40px] lg:leading-[36.48px] lg:tracking-[0.64px] mb-3'>Have a question?</h2>
                             <p className='font-lato text-[12px] md:text-[16px] lg:leading-[25px]'>While I&apos;m not actively seeking new job at the moment, I am very happy to respond to your messages or even have a tea with you. </p>
                         </div>
                         <div className="button-container md:my-auto mt-3 py-2">
-                            <Link href='#' className='py-2 px-4 lg:py-[12px] lg:px-[27px] my-auto font-oswald md:text-[16px] md:tracking-[1.12px] lg:text-[24px] font-semibold bg-light-orange-05 rounded-[4px]'>Send a Message</Link>
+                            <Link href='#' className='py-2 px-4 lg:py-[12px] lg:px-[27px] my-auto font-oswald md:text-[16px] md:tracking-[1.12px] lg:text-[24px] font-semibold bg-light-orange-05 hover:bg-light-orange-03 transform transition-all rounded-[4px]'>Send a Message</Link>
                         </div>
                     </div>
                 </div>

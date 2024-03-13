@@ -21,7 +21,7 @@ function HeroBlock ( {
             <h1 className='font-oswald  text-[32px] md:text-[48px] tracking-[0.512px] leading-[29.184px] md:leading-[43.776px] md:tracking-[0.768px] lg:text-[67px] text-white lg:leading-[61.104px] lg:tracking-[1.072px]'>FRONT END <span className='text-light-blue-05'>DEVELOPER</span>  <br></br> <span className='text-[19.5px] tracking-[0.536px] md:text-[29px] md:tracking-[0.798px] lg:text-[41px] leading-normal lg:tracking-[1.128px]'>AND I <span className='text-light-blue-05'>LOVE</span> DEVELOPING YOUR IDEAS</span></h1>
             <div className="button-container flex justify-between mt-4">
               <p className='max-w-[170px] tracking-[0.1px] md:max-w-[275px] lg:max-w-[335px] text-left text-[10px] md:text-[16px] lg:text-[20px] text-light-gray-01 font-normal font-lato md:leading-[24px] leading-normal'>I am skilled in building and designing things for the web. Currently working web-based projects at Greydient Lab.</p>
-              <button id="workshead" className='px-4 py-2 md:px-[22px] md:py-[10px] lg:px-[47px] lg:py-[19px] bg-light-orange-05 text-white font-oswald text-[15px] md:text-[20px] lg:text-[24px] font-semibold rounded-[4px]'>View Projects</button>
+              <button id="workshead" className='px-4 py-2 md:px-[22px] md:py-[10px] lg:px-[47px] lg:py-[19px] bg-light-orange-05 hover:bg-light-orange-03 transform transition-all text-white font-oswald text-[15px] md:text-[20px] lg:text-[24px] font-semibold rounded-[4px]'>View Projects</button>
             </div>
           </div>
           <div className="max-w-[1144px] mx-auto mt-20"><Lottie animationData={groovyWalkAnimation} /></div>
