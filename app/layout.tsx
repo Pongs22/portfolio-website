@@ -18,11 +18,11 @@ export default function RootLayout( {
   return (
     <>
       <head>
-        <link rel="icon" href="public/assets/jm-logo.svg"></link>
-        <meta property="og:image" content="public/assets/portfolio-social-share.jpg"></meta>
+        <link rel="icon" href="https://portfolio-website-nine-ashen.vercel.app/assets/jm-logo.svg"></link>
+        <meta property="og:image" content="https://portfolio-website-nine-ashen.vercel.app/assets/portfolio-social-share.jpg"></meta>
         <meta property="og:image:width" content="2401"></meta>
         <meta property="og:image:height" content="1260"></meta>
-        <meta property="og:image:type" content="image/jpeg"></meta>
+        <meta property="og:image:type" content="image/svg"></meta>
       </head>
       <html lang="en">
         <body className={inter.className}>{children}</body>
