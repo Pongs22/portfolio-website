@@ -17,6 +17,8 @@ export default function RootLayout( {
 }> ) {
   return (
     <>
+      
+      <html lang="en">
       <head>
         <link rel="icon" href="https://portfolio-website-nine-ashen.vercel.app/assets/jm-logo.svg"></link>
         <meta property="og:locale" content="en_US"></meta>
@@ -33,7 +35,6 @@ export default function RootLayout( {
         <meta name="twitter:description" content="Hi, Nice to meet you! I am Jun Mar Manuel. A skilled front end developer and currently working awesome projects at Greydient Lab"></meta>
         <meta name="twitter:image" content="https://portfolio-website-nine-ashen.vercel.app/assets/social-share-image.png"></meta>
       </head>
-      <html lang="en">
         <body className={inter.className}>{children}</body>
       </html>
     </>

@@ -9,12 +9,13 @@ function HeroBlock ( {
 } ) {
   return (
     <>
-      <div className='jm-b-hero-sections bg-dark-blue-05 flex pb-[185px] relative overflow-hidden justify-center text-center '>
+      <div className='jm-b-hero-sections bg-dark-blue-05 flex lg:pb-[185px] md:pb-[100px] pb-[50px] relative overflow-hidden justify-center text-center '>
         <div className="absolute top-[64px] md:top-[84px] w-screen h-screen z-1 align-items-center justify-center grid grid-cols-boxes-sm-width grid-rows-boxes-sm-height md:grid-cols-boxes-width-md md:grid-rows-boxes-height-md lg:grid-cols-boxes-width lg:grid-rows-boxes-height">
           {Array.from( { length: 10 * 7 } ).map( ( _, index ) => (
             <div key={index} className="col-span-1 size-[125px] md:size-[150px] lg:size-[200px] border border-dark-blue-01 hover:bg-dark-blue-03 transition-all "></div>
           ) )}
         </div>
+        
         <div className="container relative align-middle justify-center z-2 mt-[200px]">
           <div className="text-container max-w-[296px] md:max-w-[444px] lg:max-w-[625px] mx-auto">
             <p className='text-left font-oswald text-[19.5px] tracking-[0.536px] leading-normal md:text-[24px] md:tracking-[1.2px] lg:text-[30px] font-normal lg:tracking-[1.5px] p-0 md:pl-1 text-light-orange-05'>Hi I am Jun Mar,</p>

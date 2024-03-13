@@ -82,7 +82,7 @@ function WorksBlock( {
                     className='absolute hidden md:block lg:bottom-[-150px] z-1 animate-spin-slow -left-[200px] md:w-[550px] lg:w-[900px] md:bottom-[50px]' />
                 <div className="container header-container max-w-[1144px]">
                     <div className="text-container md:max-w-[400px] lg:max-w-[557px]">
-                        <h4 className='font-oswald md:text-[24px] lg:text-[30px] tracking-[1.5px]'>FEATURED <span className='text-light-orange-05'>WORKS</span></h4>
+                        <h4 className='font-oswald text-[24px] lg:text-[30px] tracking-[1.5px]'>FEATURED <span className='text-light-orange-05'>WORKS</span></h4>
                         <p className='font-lato text-[12px] md:text-[16px] lg:text-[20px] tracking-[0.2px] text-light-blue-01 mt-4'>Each project represents a unique challenge I&apos;ve tackled, combining creativity, attention to detail, and a user-centric approach.</p>
                     </div>
                 </div>
