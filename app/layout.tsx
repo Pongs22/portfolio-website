@@ -20,8 +20,8 @@ export default function RootLayout( {
       <head>
         <link rel="icon" href="https://portfolio-website-nine-ashen.vercel.app/assets/jm-logo.svg"></link>
         <meta property="og:image" content="https://portfolio-website-nine-ashen.vercel.app/assets/social-share-image.png"></meta>
-        <meta property="og:image:width" content="2401"></meta>
-        <meta property="og:image:height" content="1260"></meta>
+        <meta property="og:image:width" content="1200"></meta>
+        <meta property="og:image:height" content="630"></meta>
         <meta property="og:image:type" content="image/svg"></meta>
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta name="twitter:title" content="Jun Mar Manuel - Portfolio"></meta>
