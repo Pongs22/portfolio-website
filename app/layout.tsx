@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter( { subsets: ["latin"] } );
 
 export const metadata: Metadata = {
-  title: "Jun Mar Manuel - Portfolio",
+  title: "JM | Portfolio",
   description: "Hi, Nice to meet you! I am Jun Mar Manuel. A skilled front end developer and currently working awesome projects at Greydient Lab",
   metadataBase: new URL( 'https://portfolio-website-nine-ashen.vercel.app/?fbclid=IwAR2dRyqyoMjxKsY_EzyIOzJtwmC4a8TortRVBwI1lLGvOTfB3xzjgI6vAuk' ),
 };
@@ -19,6 +19,11 @@ export default function RootLayout( {
     <>
       <head>
         <link rel="icon" href="https://portfolio-website-nine-ashen.vercel.app/assets/jm-logo.svg"></link>
+        <meta property="og:locale" content="en_US"></meta>
+        <meta property="og:site_name" content="jm_portfolio"></meta>
+        <meta property="og:title" content="JM | Portfolio"></meta>
+        <meta property="og:url" content="https://portfolio-website-nine-ashen.vercel.app"></meta>
+        <meta name="description" content="Hi, Nice to meet you! I am Jun Mar Manuel. A skilled front end developer and currently working awesome projects at Greydient Lab"></meta>
         <meta property="og:image" content="https://portfolio-website-nine-ashen.vercel.app/assets/social-share-image.png"></meta>
         <meta property="og:image:width" content="1200"></meta>
         <meta property="og:image:height" content="630"></meta>
