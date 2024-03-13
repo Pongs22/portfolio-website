@@ -7,38 +7,7 @@ const inter = Inter( { subsets: ["latin"] } );
 export const metadata: Metadata = {
   title: "Jun Mar Manuel - Portfolio",
   description: "Hi, Nice to meet you! I am Jun Mar Manuel. A skilled front end developer and currently working awesome projects at Greydient Lab",
-  icons: {
-    icon: '/logoooo.svg',
-    shortcut: '/logoooo.svg',
-    apple: '/logoooo.svg',
-    other: {
-      rel: 'apple-touch-icon-precomposed',
-      url: '/logoooo.svg',
-    } },
-    twitter: {
-      card: 'app',
-      title: 'Jun Mar Manuels - Portfolio',
-      description: 'Hi, Nice to meet you! I am Jun Mar Manuel. A skilled front end developer and currently working awesome projects at Greydient Lab',
-      siteId: '1467726470533754880',
-      creator: 'jM',
-      creatorId: '1467726470533754880',
-      images: {
-        url: 'assets/portfolio-social-share.png',
-        alt: 'Social Share Image',
-      },
-      app: {
-        name: 'twitter_app',
-        id: {
-          iphone: 'twitter_app://iphone',
-          ipad: 'twitter_app://ipad',
-          googleplay: 'twitter_app://googleplay',
-        },
-        url: {
-          iphone: 'https://iphone_url',
-          ipad: 'https://ipad_url',
-        },
-      },
-    },
+  metadataBase: new URL('https://portfolio-website-nine-ashen.vercel.app/?fbclid=IwAR2dRyqyoMjxKsY_EzyIOzJtwmC4a8TortRVBwI1lLGvOTfB3xzjgI6vAuk'),
 };
 
 export default function RootLayout( {
@@ -47,8 +16,17 @@ export default function RootLayout( {
   children: React.ReactNode;
 }> ) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <>
+      <head>
+        <link rel="icon" href="public/assets/jm-logo.svg"></link>
+        <meta property="og:image" content="public/assets/portfolio-social-share.jpg"></meta>
+        <meta property="og:image:width" content="2401"></meta>
+        <meta property="og:image:height" content="1260"></meta>
+        <meta property="og:image:type" content="image/jpeg"></meta>
+      </head>
+      <html lang="en">
+        <body className={inter.className}>{children}</body>
+      </html>
+    </>
   );
 }
