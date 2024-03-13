@@ -61,7 +61,7 @@ function WorksBlock( {
     }, [] );
     return (
         <>
-            <div className='jm-b-works-section bg-dark-blue-04 py-[80px] md:py-[125px] overflow-hidden relative'>
+            <div className='jm-b-works-section bg-dark-blue-04 py-[80px] md:py-[125px] overflow-hidden relative'  id='qouteText'>
                 <Image
                     src='/assets/first-image.svg'
                     alt='css-icon'
@@ -83,11 +83,11 @@ function WorksBlock( {
                 <div className="container header-container max-w-[1144px]">
                     <div className="text-container md:max-w-[400px] lg:max-w-[557px]">
                         <h4 className='font-oswald md:text-[24px] lg:text-[30px] tracking-[1.5px]'>FEATURED <span className='text-light-orange-05'>WORKS</span></h4>
-                        <p className='font-lato md:text-[16px] lg:text-[20px] tracking-[0.2px] text-light-blue-01 mt-4'>Each project represents a unique challenge I&apos;ve tackled, combining creativity, attention to detail, and a user-centric approach.</p>
+                        <p className='font-lato text-[12px] md:text-[16px] lg:text-[20px] tracking-[0.2px] text-light-blue-01 mt-4'>Each project represents a unique challenge I&apos;ve tackled, combining creativity, attention to detail, and a user-centric approach.</p>
                     </div>
                 </div>
-                <div className="works-container container md:mt-[150px] mt-[80px] lg:mt-[230px] max-w-[1144px] relative z-10">
-                    <div className="grid grid-cols-1 md:gap-y-[245px] gap-y-[100px]">
+                <div className="works-container container md:mt-[150px] mt-[60px] lg:mt-[230px] max-w-[1144px] relative z-10">
+                    <div className="grid grid-cols-1 md:gap-y-[245px] gap-y-[80px]">
                         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-4">
                             <div className="text-container col-span-2 md:col-span-1 order-2 md:order-1 md:my-auto md:max-w-[477px] mt-4 p-1">
                                 <h4 className='mb-2 lg:mb-4 font-oswald lg:text-[30px] md:text-[20px] md:tracking-[1.4px] lg:tracking-[1.5px]'>RISING WAVE (US)</h4>

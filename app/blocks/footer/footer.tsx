@@ -11,7 +11,7 @@ function FooterBlock( {
         <>
             <footer className='jm-b-footer bg-dark-blue-05 overflow-clip' id='qouteText'>
                 <div className="wrapper border-b border-dark-blue-01 bg-dark-blue-05" >
-                    <div className="container max-w-[1144px] pt-[185px] px-[28px] pb-[32px] mx-auto relative">
+                    <div className="container max-w-[1144px] pt-[185px] px-[28px] pb-[32px] mx-auto relative hidden lg:block">
                         <Image
                             src='/assets/footer-bg-portfolio.svg'
                             alt='footer-image'
@@ -36,8 +36,17 @@ function FooterBlock( {
                             className=' my-auto absolute top-[225px] right-[150px] animate-bounce-slow'
                         />
                     </div>
+                    <div className="container max-w-[1144px] pt-[185px] px-[28px] pb-[32px] mx-auto relative lg:hidden">
+                        <Image
+                            src='/assets/footer-feature.svg'
+                            alt='footer-image'
+                            width={1142}
+                            height={310}
+                            className=' my-auto w-full h-full'
+                        />
+                    </div>
                 </div>
-                <div className="container max-w-[1144px] flex justify-between flex-col md:flex-row py-[30px]">
+                <div className="container max-w-[1144px] grid grid-cols-2 gap-y-4 md:flex md:justify-between flex-col md:flex-row py-[30px] text-center justify-center mx-auto">
                     <div className="logo-wrapper order-1">
                         <Image
                             src='/assets/logoooo.svg'
@@ -47,11 +56,11 @@ function FooterBlock( {
                             className=' my-auto w-[50px] h-[40px] md:w-full md:h-full'
                         />
                     </div>
-                    <div className="copyright-wrapper my-auto order-3 md:order-2">
-                        <p className='font-lato text-light-gray-01 text-[16px] tracking-[1.12px]'>Built and designed by me @ {currentYear} </p>
+                    <div className="copyright-wrapper my-auto order-3 md:order-2 col-span-2">
+                        <p className='font-lato text-light-gray-01 text-[12px] md:text-[16px] tracking-[1.12px]'>Built and designed by me @ {currentYear} </p>
                     </div>
-                    <div className="social-link-wrapper my-auto order-2 md:order-3">
-                        <ul className='flex gap-x-[36px] my-auto  align-middle'>
+                    <div className="social-link-wrapper md:my-auto order-2 md:order-3 my-auto">
+                        <ul className='flex gap-x-[36px] my-auto mx-auto align-middle justify-center'>
                             <li>
                                 <p className='sr-only'>
                                     Linkedin</p>
