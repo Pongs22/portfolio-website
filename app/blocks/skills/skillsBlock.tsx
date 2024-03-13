@@ -17,7 +17,7 @@ function SkillsBlock( {
                             <h4 className='font-oswald text-[40px] text-dark-blue-05'>WHAT I REALLY LOVE TO DO.</h4>
                             <p className='text-dark-blue-05 mt-4 font-lato text-[20px] tracking-[0.4px]'>I&apos;m Jun Mar Manuel, a skilled front-end developer with a passion for creating clean and user-friendly websites. I specialize in creating visually appealing designs with a focus on functionality and accessibility.</p>
                             <ul className=' mt-4 relative'>
-                                <li className={`absolute top-0 hello ${hovered1 ? ' opacity-100' : ' opacity-0 '} transform transition-all`} id='image-1'>
+                                <li className={`absolute top-0 hello ${hovered1 ? ' opacity-100' : ' opacity-0 '} transform transition-all hidden lg:block`} id='image-1'>
                                     <ul className='flex gap-4 flex-wrap'>
                                     <li>
                                         <Image
@@ -93,7 +93,7 @@ function SkillsBlock( {
                                         </li>
                                     </ul>
                                 </li>
-                                <li className={`absolute top-0 hello ${hovered2 ? ' opacity-100' : ' opacity-0 '} transform transition-all`} id='image-2'>
+                                <li className={`absolute top-0 hello ${hovered2 ? ' opacity-100' : ' opacity-0 '} transform transition-all hidden lg:block`} id='image-2'>
                                     <ul className='flex gap-x-4'>
                                     <li>
                                         <Image
@@ -125,7 +125,7 @@ function SkillsBlock( {
                                       
                                     </ul>
                                     </li>
-                                <li className={`absolute top-0 hello ${hovered3 ? ' opacity-100' : ' opacity-0 '} transform transition-all`} id='image-3'>
+                                <li className={`absolute top-0 hello ${hovered3 ? ' opacity-100' : ' opacity-0 '} transform transition-all hidden lg:block`} id='image-3'>
                                     <ul className='flex gap-x-4'>
                                     <li>
                                         <Image

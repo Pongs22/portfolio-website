@@ -10,7 +10,7 @@ function WorksBlock( {
 
     useEffect( () => {
         const container = document.getElementById( 'qouteText' );
-        const color = ['/assets/id-1.svg', '/assets/id-2.svg', '/assets/id-3.svg'];
+        const color = ['/assets/id-1.svg', '/assets/id-2.svg', '/assets/id-3.svg','/assets/blue-circ-trail.svg','/assets/blue-cross.svg','/assets/blue-dia-trail.svg','/assets/cross-orange.svg','/assets/white-circ-trail.svg','/assets/white-dia-trail.svg'];
         const fall = ['fall-1', 'fall-2', 'fall-3'];
         const getRandomColor = () => {
             const randomIndex = Math.floor( Math.random() * color.length );
