@@ -6,6 +6,7 @@ import SkillsBlock from "./blocks/skills/skillsBlock";
 import WorksBlock from "./blocks/works/works";
 import FooterBlock from "./blocks/footer/footer";
 import 'atropos/css';
+import AboutBlock from "./blocks/about/about";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <HeroBlock/>
       <SkillsBlock/>
       <WorksBlock/>
+      <AboutBlock/>
       <FooterBlock />
     </main>
     </>
