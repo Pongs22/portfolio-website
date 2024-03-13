@@ -19,14 +19,14 @@ export default function RootLayout( {
     <>
       <head>
         <link rel="icon" href="https://portfolio-website-nine-ashen.vercel.app/assets/jm-logo.svg"></link>
-        <meta property="og:image" content="https://portfolio-website-nine-ashen.vercel.app/assets/portfolio-social-share.jpg"></meta>
+        <meta property="og:image" content="https://portfolio-website-nine-ashen.vercel.app/assets/social-share-image.png"></meta>
         <meta property="og:image:width" content="2401"></meta>
         <meta property="og:image:height" content="1260"></meta>
         <meta property="og:image:type" content="image/svg"></meta>
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta name="twitter:title" content="Jun Mar Manuel - Portfolio"></meta>
         <meta name="twitter:description" content="Hi, Nice to meet you! I am Jun Mar Manuel. A skilled front end developer and currently working awesome projects at Greydient Lab"></meta>
-        <meta name="twitter:image" content="https://portfolio-website-nine-ashen.vercel.app/assets/portfolio-social-share.jpg"></meta>
+        <meta name="twitter:image" content="https://portfolio-website-nine-ashen.vercel.app/assets/social-share-image.png"></meta>
       </head>
       <html lang="en">
         <body className={inter.className}>{children}</body>
