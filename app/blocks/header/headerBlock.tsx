@@ -7,19 +7,26 @@ import Link from 'next/link';
 function NavigationBar( {
 } ) {
   const [preventScroll, setpreventScroll] = useState( false );
-
-  if ( preventScroll ) {
-    document.body.classList.add( 'overflow-hidden','overflow-x-hidden' );
-  }
-  else {
-    document.body.classList.remove( 'overflow-hidden' );
-  }
   useEffect( () => {
+   
+    const mains = document.querySelector( 'main' );
+  
+    if ( preventScroll ) {
+      if( mains ){
+      mains.classList.add( 'overflow-hidden','overflow-x-hidden' );
+    }
+    }
+    else {
+      if( mains ){
+      mains.classList.remove( 'overflow-hidden' );
+      }
+    }
+
     const handleResize = () => {
       setpreventScroll( false );
     };
     window.addEventListener( 'resize', handleResize );
-  }, [] );
+  }, [preventScroll] );
 
   const scrollToSection = ( sectionId: string ) => {
     const section = document.querySelector( sectionId );
@@ -68,7 +75,7 @@ function NavigationBar( {
             </button>
           </div>
         </div>
-      </div>
+     
       <div className={`nav-bar-dropdown  absolute ${preventScroll ? ' block' : ' hidden '} transform transition-all top-0 h-screen w-screen md:hidden z-[999] duration-700  bg-black/80`} id='backDrop'>
       </div>
       <div className={`w-[275px] bg-dark-blue-01 h-screen  ${preventScroll ? ' right-0 ' : ' right-[-100%] '} top-0 absolute z-[1000] transform transition-all duration-500 py-[12px] px-[24px] justify-end flex`} id='navMenu'>
@@ -131,8 +138,8 @@ function NavigationBar( {
             </li>
           </ul>
         </div>
-
-      </div>
+        </div>
+        </div>
     </>
    );
 }
