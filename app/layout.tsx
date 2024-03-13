@@ -7,7 +7,7 @@ const inter = Inter( { subsets: ["latin"] } );
 export const metadata: Metadata = {
   title: "Jun Mar Manuel - Portfolio",
   description: "Hi, Nice to meet you! I am Jun Mar Manuel. A skilled front end developer and currently working awesome projects at Greydient Lab",
-  metadataBase: new URL('https://portfolio-website-nine-ashen.vercel.app/?fbclid=IwAR2dRyqyoMjxKsY_EzyIOzJtwmC4a8TortRVBwI1lLGvOTfB3xzjgI6vAuk'),
+  metadataBase: new URL( 'https://portfolio-website-nine-ashen.vercel.app/?fbclid=IwAR2dRyqyoMjxKsY_EzyIOzJtwmC4a8TortRVBwI1lLGvOTfB3xzjgI6vAuk' ),
 };
 
 export default function RootLayout( {
