@@ -5,6 +5,7 @@ import NavigationBar from "./blocks/header/headerBlock";
 import SkillsBlock from "./blocks/skills/skillsBlock";
 import WorksBlock from "./blocks/works/works";
 import FooterBlock from "./blocks/footer/footer";
+import 'atropos/css';
 
 
 export default function Home() {

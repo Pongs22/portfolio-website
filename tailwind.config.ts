@@ -54,6 +54,8 @@ const config: Config = {
       },
       animation: {
         'spin-slow': 'spin 300s linear infinite',
+        'bounce-slow': 'bounce 5s ease-out infinite',
+        'bounce-slow-2': 'bounce 8s ease-out infinite',
       }
 
     },

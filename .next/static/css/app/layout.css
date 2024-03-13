@@ -636,11 +636,17 @@ video {
 .bottom-\[4\%\] {
   bottom: 4%;
 }
+.bottom-\[62px\] {
+  bottom: 62px;
+}
 .left-\[-50\%\] {
   left: -50%;
 }
 .left-\[10\%\] {
   left: 10%;
+}
+.left-\[122px\] {
+  left: 122px;
 }
 .left-\[16\%\] {
   left: 16%;
@@ -653,6 +659,9 @@ video {
 }
 .right-\[10\%\] {
   right: 10%;
+}
+.right-\[150px\] {
+  right: 150px;
 }
 .right-\[35\%\] {
   right: 35%;
@@ -677,6 +686,9 @@ video {
 }
 .top-\[17\%\] {
   top: 17%;
+}
+.top-\[225px\] {
+  top: 225px;
 }
 .top-\[64px\] {
   top: 64px;
@@ -720,6 +732,9 @@ video {
 .mt-2 {
   margin-top: 0.5rem;
 }
+.mt-20 {
+  margin-top: 5rem;
+}
 .mt-4 {
   margin-top: 1rem;
 }
@@ -731,12 +746,6 @@ video {
 }
 .mt-\[80px\] {
   margin-top: 80px;
-}
-.mt-10 {
-  margin-top: 2.5rem;
-}
-.mt-20 {
-  margin-top: 5rem;
 }
 .block {
   display: block;
@@ -754,6 +763,9 @@ video {
   width: 125px;
   height: 125px;
 }
+.h-\[143px\] {
+  height: 143px;
+}
 .h-\[40px\] {
   height: 40px;
 }
@@ -765,6 +777,9 @@ video {
 }
 .min-h-screen {
   min-height: 100vh;
+}
+.w-\[469px\] {
+  width: 469px;
 }
 .w-\[50px\] {
   width: 50px;
@@ -794,12 +809,23 @@ video {
   --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.translate-y-\[65px\] {
-  --tw-translate-y: 65px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+@keyframes bounce {
+
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+.animate-bounce-slow {
+  animation: bounce 5s ease-out infinite;
 }
 @keyframes spin {
 
@@ -809,6 +835,21 @@ video {
 }
 .animate-spin-slow {
   animation: spin 300s linear infinite;
+}
+@keyframes bounce {
+
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+.animate-bounce-slow-2 {
+  animation: bounce 8s ease-out infinite;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -866,8 +907,17 @@ video {
 .overflow-hidden {
   overflow: hidden;
 }
+.overflow-clip {
+  overflow: clip;
+}
 .rounded-\[4px\] {
   border-radius: 4px;
+}
+.rounded-full {
+  border-radius: 9999px;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 .border {
   border-width: 1px;
@@ -905,6 +955,22 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-light-blue-05 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 114 255 / var(--tw-bg-opacity));
+}
+.bg-\[\#0257DA\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 87 218 / var(--tw-bg-opacity));
+}
+.bg-\[\#E67635\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 118 53 / var(--tw-bg-opacity));
+}
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 .p-1 {
   padding: 0.25rem;
@@ -1108,6 +1174,11 @@ video {
 .opacity-100 {
   opacity: 1;
 }
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .ring-1 {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -1249,6 +1320,11 @@ body {
     transform: translate(20px, 120px) rotateX(-180deg) rotateY(-90deg) scale(0.5);
     opacity: 0;
   }
+}
+
+.my-atropos {
+  width: 400px;
+  height: 400px;
 }
 
 .hover\:bg-dark-blue-03:hover {
@@ -1493,4 +1569,3 @@ body {
 .\[\&\>li\]\:text-\[14px\]>li {
   font-size: 14px;
 }
-

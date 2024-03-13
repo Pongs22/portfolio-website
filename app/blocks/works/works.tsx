@@ -3,9 +3,11 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
 import Link from 'next/link';
+import Atropos from 'atropos/react';
 
 function WorksBlock( {
 } ) {
+
     useEffect( () => {
         const container = document.getElementById( 'qouteText' );
         const color = ['/assets/id-1.svg', '/assets/id-2.svg', '/assets/id-3.svg'];
@@ -28,10 +30,10 @@ function WorksBlock( {
                 star.style.top = y + 'px';
                 star.style.background = `url( ${getRandomColor()} ) center / cover no-repeat`;
                 star.style.animation = `${getRandomAnimation()} 2s ease-in-out`;
-                container.appendChild( star );
+                container.appendChild ( star );
                 setTimeout( () => {
                     star.remove();
-                }, 1200 ); 
+                }, 1200 );
             };
 
             let prevMouseX = 0;
@@ -43,7 +45,6 @@ function WorksBlock( {
                 const distance = Math.sqrt( ( clientX - prevMouseX ) ** 2 + ( clientY - prevMouseY ) ** 2 );
                 totalDistance += distance;
                 while ( totalDistance >= 100 ) {
-                    createStar( clientX, clientY );
                     createStar( clientX, clientY );
                     totalDistance -= 100;
                 }
@@ -104,6 +105,7 @@ function WorksBlock( {
                                 </div>
                             </div>
                             <div className="text-container col-span-2 md:col-span-1 order-1 md:order-2 justify-end flex relative">
+
                                 <Image
                                     src='/assets/img-background.svg'
                                     alt='hero-image'
@@ -111,13 +113,18 @@ function WorksBlock( {
                                     height={449}
                                     className='absolute right-[-50%] z-1 top-1/2 translate-y-[-50%]'
                                 />
-                                <Image
-                                    src='/assets/work-1.png'
-                                    alt='hero-image'
-                                    width={558}
-                                    height={449}
-                                    className='flex w-full md:w-[558px] z-2 relative'
-                                />
+                                <Atropos shadow={true} shadowScale={0.4} highlight={true} activeOffset={2} className="w-full h-full " >
+                                    <div className="bg-[#0257DA] relative">
+                                        <Image
+                                            src='/assets/rw-no-bg-img.svg'
+                                            alt='hero-image'
+                                            width={558}
+                                            height={449}
+                                            className='flex w-full md:w-[558px] '
+                                            data-atropos-offset="15"
+                                        />
+                                    </div>
+                                </Atropos>
                             </div>
                         </div>
 
@@ -147,13 +154,18 @@ function WorksBlock( {
                                     height={449}
                                     className='absolute left-[-50%] z-1 top-1/2 translate-y-[-50%]'
                                 />
-                                <Image
-                                    src='/assets/work-2.png'
-                                    alt='hero-image'
-                                    width={558}
-                                    height={449}
-                                    className='flex w-full md:w-[558px] z-2 relative'
-                                />
+                                 <Atropos shadow={true} shadowScale={0.4} highlight={true} activeOffset={2} className="w-full h-full " >
+                                    <div className="bg-[#E67635] relative">
+                                        <Image
+                                            src='/assets/mp-no-bg-img.svg'
+                                            alt='hero-image'
+                                            width={558}
+                                            height={449}
+                                            className='flex w-full md:w-[558px] '
+                                            data-atropos-offset="15"
+                                        />
+                                    </div>
+                                </Atropos>
                             </div>
                         </div>
 
@@ -181,19 +193,25 @@ function WorksBlock( {
                                     height={449}
                                     className='absolute right-[-50%] z-1 top-1/2 translate-y-[-50%]'
                                 />
-                                <Image
-                                    src='/assets/work-3.png'
-                                    alt='hero-image'
-                                    width={558}
-                                    height={449}
-                                    className='flex w-full md:w-[558px] z-2 relative'
-                                />
+                               <Atropos shadow={true} shadowScale={0.4} highlight={true} activeOffset={2} className="w-full h-full " >
+                                    <div className="bg-gray-100 relative">
+                                        <Image
+                                            src='/assets/loby-no-bg-img.svg'
+                                            alt='hero-image'
+                                            width={558}
+                                            height={449}
+                                            className='flex w-full md:w-[558px] '
+                                            data-atropos-offset="15"
+                                        />
+                                    </div>
+                                </Atropos>
                             </div>
                         </div>
 
                     </div>
                 </div>
-            </div>
+            </div >
+
         </>
     );
 }
