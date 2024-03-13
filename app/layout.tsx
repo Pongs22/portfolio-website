@@ -35,7 +35,7 @@ export default function RootLayout( {
         <meta name="twitter:description" content="Hi, Nice to meet you! I am Jun Mar Manuel. A skilled front end developer and currently working awesome projects at Greydient Lab"></meta>
         <meta name="twitter:image" content="https://portfolio-website-nine-ashen.vercel.app/assets/social-share-image.png"></meta>
       </head>
-        <body className={`${inter.className} overflow-x-hidden`}>{children}</body>
+        <body className={`${inter.className} overflow-x-clip`}>{children}</body>
       </html>
     </>
   );
