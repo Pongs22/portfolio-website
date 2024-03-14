@@ -13,7 +13,7 @@ function NavigationBar( {
   
     if ( preventScroll ) {
       if( mains ){
-      mains.classList.add( 'overflow-hidden','overflow-x-hidden' );
+      mains.classList.add( 'overflow-hidden' );
     }
     }
     else {
@@ -78,7 +78,7 @@ function NavigationBar( {
      
       <div className={`nav-bar-dropdown  absolute ${preventScroll ? ' block' : ' hidden '} transform transition-all top-0 h-screen w-screen md:hidden z-[999] duration-700  bg-black/80`} id='backDrop'>
       </div>
-      <div className={`w-[275px] bg-dark-blue-01 h-screen  ${preventScroll ? ' right-0 ' : ' right-[-100%] '} top-0 absolute z-[1000] transform transition-all duration-500 py-[12px] px-[24px] justify-end flex`} id='navMenu'>
+      <div className={`w-[275px] md:hidden bg-dark-blue-01 h-screen  ${preventScroll ? ' right-0 ' : ' right-[-100%] '} top-0 absolute z-[1000] transform transition-all duration-500 py-[12px] px-[24px] justify-end flex`} id='navMenu'>
         <button onClick={() => setpreventScroll( false )} id='navBtn'>
           <Image
             src='/assets/close-img.svg'
@@ -88,7 +88,7 @@ function NavigationBar( {
             className='absolute top-[12px] right-[24px]'
           />
         </button>   
-        <div className="menu-wrapper absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-y-[32px] md:hidden">
+        <div className="menu-wrapper absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-y-[32px]">
           <ul className='flex flex-col gap-y-[50px] my-auto align-middle justify-center [&>li]:my-auto [&>li]:font-lato [&>li]:text-[14px] md:hidden'>
             <li className='flex mx-auto'><button className='tracking-[1.4px] font-bold hover:text-light-blue-05 transition-all' onClick={() => handleClick( '#works' )}>Works</button></li>
             <li className='flex mx-auto'><button className='tracking-[1.4px] font-bold hover:text-light-blue-05 transition-all' onClick={() => handleClick( '#about' )}>About</button></li>

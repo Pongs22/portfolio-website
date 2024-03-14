@@ -10,8 +10,8 @@ function SkillsBlock( {
     const [hovered3, sethovered3] = useState( false );
     return (
         <>
-            <div className='jm-b-skill-sections bg-white relative max-w-[1144px] mx-auto'>
-                <div className="container align-middle justify-between z-2 py-[80px] md:py-[100px] grid grid-cols-1 md:grid-cols-2 relative gap-x-6 gap-y-6 md:gap-y-0">
+            <div className='jm-b-skill-sections color bg-white relative  mx-auto' data-color='#FFFFFF' >
+                <div className="container max-w-[1144px] align-middle justify-between z-2 py-[80px] md:py-[100px] grid grid-cols-1 md:grid-cols-2 relative gap-x-6 gap-y-6 md:gap-y-0">
                     <div className="text-container-wrapper relative">
                         <div className="text-container md:sticky md:top-[100px]">
                             <h4 className='font-oswald text-[24px] lg:text-[40px] lg:tracking-[1px] text-dark-blue-05'>WHAT I REALLY LOVE TO DO.</h4>

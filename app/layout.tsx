@@ -18,7 +18,7 @@ export default function RootLayout( {
   return (
     <>
       
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="https://portfolio-website-nine-ashen.vercel.app/assets/jm-logo.svg"></link>
         <meta property="og:locale" content="en_US"></meta>

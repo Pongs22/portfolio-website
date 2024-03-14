@@ -61,7 +61,7 @@ function WorksBlock( {
     }, [] );
     return (
         <>
-            <div className='jm-b-works-section bg-dark-blue-04 py-[80px] md:py-[125px] overflow-hidden relative' id='works'>
+            <div className='jm-b-works-section color bg-dark-blue-04 py-[80px] md:py-[125px] overflow-hidden relative ' id='works' data-color='#111737'>
                 <Image
                     src='/assets/first-image.svg'
                     alt='css-icon'

@@ -135,6 +135,9 @@ body {
   width: 400px;
   height: 400px;
 }
-main {
-  overflow-x: hidden;
+
+@media only screen and (max-width: 767px) {
+  body {
+    overflow-x: hidden !important;
+  }
 }

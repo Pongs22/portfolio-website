@@ -10,7 +10,7 @@ function AboutBlock( {
 
     return (
         <>
-            <div className='bg-white pb-[268px] pt-[80px] md:pt-[100px] relative' id='about'>
+            <div className='jm-b-about-section color bg-white pb-[268px] pt-[80px] md:pt-[100px] relative' id='about' data-color='#FFFFFF'>
                 <svg className="absolute inset-0 h-full w-full stroke-gray-200 stroke-gradient-to-b [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
                     <defs>
                         <pattern id="0787a7c5-978c-4f66-83c7-11c213f99cb7" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">

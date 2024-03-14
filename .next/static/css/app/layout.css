@@ -1460,36 +1460,47 @@ body {
   width: 400px;
   height: 400px;
 }
-main {
-  overflow-x: hidden;
+
+@media only screen and (max-width: 767px) {
+  body {
+    overflow-x: hidden !important;
+  }
 }
+
 .hover\:bg-dark-blue-03:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(21 28 65 / var(--tw-bg-opacity));
 }
+
 .hover\:bg-light-blue-04:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(92 140 255 / var(--tw-bg-opacity));
 }
+
 .hover\:bg-light-orange-03:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(254 161 69 / var(--tw-bg-opacity));
 }
+
 .hover\:text-light-blue-05:hover {
   --tw-text-opacity: 1;
   color: rgb(55 114 255 / var(--tw-text-opacity));
 }
+
 .hover\:ring-light-blue-05:hover {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(55 114 255 / var(--tw-ring-opacity));
 }
+
 .hover\:grayscale-0:hover {
   --tw-grayscale: grayscale(0);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
+
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
 }
+
 @media (min-width: 768px) {
 
   .md\:sticky {
@@ -1793,6 +1804,7 @@ main {
     letter-spacing: 1.4px;
   }
 }
+
 @media (min-width: 1024px) {
 
   .lg\:bottom-\[-150px\] {
@@ -1981,13 +1993,16 @@ main {
     letter-spacing: 1px;
   }
 }
+
 .\[\&\>li\]\:my-auto>li {
   margin-top: auto;
   margin-bottom: auto;
 }
+
 .\[\&\>li\]\:font-lato>li {
   font-family: Lato;
 }
+
 .\[\&\>li\]\:text-\[14px\]>li {
   font-size: 14px;
 }
