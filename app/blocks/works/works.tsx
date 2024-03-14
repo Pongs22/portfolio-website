@@ -47,6 +47,17 @@ function WorksBlock( {
             },
         } );
 
+        gsap.set( '.jm-b-works-section .first-image', { opacity: 0 } );
+        gsap.to( '.jm-b-works-section .first-image', {
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '.jm-b-works-section',
+                start: 'top center',
+                end: 'top center',
+                scrub: 1,
+            },
+        } );
+
         const worksText = document.querySelectorAll( '.jm-b-works-section .works-text-container' );
         gsap.utils.toArray( worksText ).forEach( function ( g ) {
             gsap.set( g as HTMLElement, {opacity:0, x:-100} );
@@ -56,8 +67,8 @@ function WorksBlock( {
                 stagger: 4,
                 scrollTrigger: {
                     trigger: g as HTMLElement,
-                    start: 'top center',
-                    end: 'top center',
+                    start: 'top-=250px center',
+                    end: 'top-=250px center',
                 },
             } );
         } );
@@ -71,8 +82,8 @@ function WorksBlock( {
                 stagger: 4,
                 scrollTrigger: {
                     trigger: g as HTMLElement,
-                    start: 'top center',
-                    end: 'top center',
+                    start: 'top-=250px center',
+                    end: 'top-=250px center',
                 },
             } );
         } );
@@ -83,8 +94,8 @@ function WorksBlock( {
             x:0,
             scrollTrigger: {
                 trigger: '.jm-b-works-section .work-text-container',
-                start: 'top center',
-                end: 'top center',
+                start: 'top-=250px center',
+                end: 'top-=250px center',
             },
         } );
 
@@ -94,8 +105,8 @@ function WorksBlock( {
             x:0,
             scrollTrigger: {
                 trigger: '.jm-b-works-section .work-image-container',
-                start: 'top center',
-                end: 'top center',
+                start: 'top-=250px center',
+                end: 'top-=250px center',
             },
         } );
 
@@ -157,7 +168,7 @@ function WorksBlock( {
                     alt='css-icon'
                     width={700}
                     height={700}
-                    className='absolute hidden md:block md:top-[300px] lg:top-[300px] z-1 animate-spin-slow -left-[200px] md:w-[450px] lg:w-[700px]' />
+                    className='first-image absolute hidden md:block md:top-[300px] lg:top-[300px] z-1 animate-spin-slow -left-[200px] md:w-[450px] lg:w-[700px]' />
                 <Image
                     src='/assets/second-image.svg'
                     alt='css-icon'

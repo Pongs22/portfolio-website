@@ -711,6 +711,12 @@ video {
 .top-\[64px\] {
   top: 64px;
 }
+.right-\[-400\%\] {
+  right: -400%;
+}
+.right-\[-200\%\] {
+  right: -200%;
+}
 .z-10 {
   z-index: 10;
 }

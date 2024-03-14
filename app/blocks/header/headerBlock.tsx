@@ -78,7 +78,7 @@ function NavigationBar( {
      
       <div className={`nav-bar-dropdown  absolute ${preventScroll ? ' block' : ' hidden '} transform transition-all top-0 h-screen w-screen md:hidden z-[999] duration-700  bg-black/80`} id='backDrop'>
       </div>
-      <div className={`w-[275px] md:hidden bg-dark-blue-01 h-screen  ${preventScroll ? ' right-0 ' : ' right-[-100%] '} top-0 absolute z-[1000] transform transition-all duration-500 py-[12px] px-[24px] justify-end flex`} id='navMenu'>
+      <div className={`w-[275px] md:hidden bg-dark-blue-01 h-screen  ${preventScroll ? ' right-0 ' : ' right-[-200%] '} top-0 absolute z-[1000] transform transition-all duration-500 py-[12px] px-[24px] justify-end flex`} id='navMenu'>
         <button onClick={() => setpreventScroll( false )} id='navBtn'>
           <Image
             src='/assets/close-img.svg'
@@ -93,7 +93,7 @@ function NavigationBar( {
             <li className='flex mx-auto'><button className='tracking-[1.4px] font-bold hover:text-light-blue-05 transition-all' onClick={() => handleClick( '#works' )}>Works</button></li>
             <li className='flex mx-auto'><button className='tracking-[1.4px] font-bold hover:text-light-blue-05 transition-all' onClick={() => handleClick( '#about' )}>About</button></li>
             <li className='flex mx-auto'><button className='tracking-[1.4px] font-bold hover:text-light-blue-05 transition-all' onClick={() => handleClick( '#contact' )}>Contact Me</button></li>
-            <li className='flex mx-auto'><button className='font-oswald px-4 py-3 bg-light-orange-05 hover:bg-light-orange-03 transform transition-all text-white tracking-[1.04px] rounded-[4px]' onClick={() => handleClick( '#contact' )}>Download CV</button></li>
+            <li className='flex mx-auto'><a href="/assets/jm-portfolio.pdf" download="JM Portfolio" className='font-oswald px-4 py-3 bg-light-orange-05 hover:bg-light-orange-03 transform transition-all text-white tracking-[1.04px] rounded-[4px]'>Download CV</a></li>
           </ul>
           <ul className='flex gap-x-[36px] my-auto mx-auto align-middle justify-center'>
           <li>
@@ -106,7 +106,7 @@ function NavigationBar( {
                     width={36}
                     height={36}
                     sizes='100vw'
-                    className=' mx-auto my-auto grayscale hover:grayscale-0 transition-all'
+                    className=' mx-auto my-auto transition-all'
                 />
             </Link>
           </li>
@@ -119,7 +119,7 @@ function NavigationBar( {
                         width={36}
                         height={36}
                         sizes='100vw'
-                        className=' mx-auto my-auto grayscale hover:grayscale-0 transition-all'
+                        className=' mx-auto my-auto transition-all'
                     />
                 </Link>
             </li>
@@ -132,7 +132,7 @@ function NavigationBar( {
                         width={36}
                         height={36}
                         sizes='100vw'
-                        className=' mx-auto my-auto grayscale hover:grayscale-0 transition-all'
+                        className=' mx-auto my-auto transition-all'
                     />
                 </Link>
             </li>

@@ -43,6 +43,17 @@ function AboutBlock( {
             scrub: 1,
         },
     } );
+
+    gsap.set( '.jm-b-about-section .image-container', { opacity: 0, x:100 } );
+    gsap.to( '.jm-b-about-section .image-container', {
+        opacity: 1,
+        x:0,
+        scrollTrigger: {
+            trigger: '.jm-b-about-section',
+            start: 'top center',
+            end: 'top center',
+        },
+    } );
 }, [] );
     const [hovered, sethovered] = useState( false );
 
