@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
 import Link from 'next/link';
+import SplitType from 'split-type';
+import { gsap } from 'gsap';
 
 function FooterBlock( {
 } ) {
@@ -65,8 +67,8 @@ function FooterBlock( {
                 <div className="contact-section-wrapper container max-w-[1144px]" >
                     <div id='contact' className="content text-center md:text-start flex flex-col gap-y-2 md:flex-row justify-between bg-dark-blue-01 mt-[-80px] md:mt-[-125px] py-5 px-8 md:p-[40px] lg:py-[76px] lg:px-[97px]">
                         <div className="text-container lg:max-w-[461px] md:max-w-[419px] max-w-[351px] mx-auto md:mx-0">
-                            <h2 className='font-oswald text-[20px] leading-[18.24px] tracking-[0.32px] md:text-[28px] md:leading-[25.536px] md:tracking-[0.44px] lg:text-[40px] lg:leading-[36.48px] lg:tracking-[0.64px] mb-3'>Have a question?</h2>
-                            <p className='font-lato text-[12px] md:text-[16px] lg:leading-[25px]'>While I&apos;m not actively seeking new job at the moment, I am very happy to respond to your messages or even have a tea with you. </p>
+                            <h2 className='font-oswald text-[20px] leading-[18.24px] tracking-[0.32px] md:text-[28px] md:leading-[25.536px] md:tracking-[0.44px] lg:text-[40px] lg:leading-[36.48px] lg:tracking-[0.64px] mb-3' id='contactSplit'>Have a question?</h2>
+                            <p className='font-lato text-[12px] md:text-[16px] lg:leading-[25px] description'>While I&apos;m not actively seeking new job at the moment, I am very happy to respond to your messages or even have a tea with you. </p>
                         </div>
                         <div className="button-container md:my-auto mt-3 py-2">
                             <Link href='mailto:junmarm18@gmail.com' className='py-2 px-4 lg:py-[12px] lg:px-[27px] my-auto font-oswald md:text-[16px] md:tracking-[1.12px] lg:text-[24px] font-semibold bg-light-orange-05 hover:bg-light-orange-03 transform transition-all rounded-[4px]'>Send a Message</Link>

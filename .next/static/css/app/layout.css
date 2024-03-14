@@ -852,6 +852,12 @@ video {
 .max-w-full {
   max-width: 100%;
 }
+.max-w-\[276px\] {
+  max-width: 276px;
+}
+.max-w-\[256px\] {
+  max-width: 256px;
+}
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1123,6 +1129,14 @@ video {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
 .pb-\[268px\] {
   padding-bottom: 268px;
 }
@@ -1195,6 +1209,30 @@ video {
 .text-\[9px\] {
   font-size: 9px;
 }
+.text-\[18px\] {
+  font-size: 18px;
+}
+.text-\[28px\] {
+  font-size: 28px;
+}
+.text-\[16\.5px\] {
+  font-size: 16.5px;
+}
+.text-\[15\.5px\] {
+  font-size: 15.5px;
+}
+.text-\[10\.5px\] {
+  font-size: 10.5px;
+}
+.text-\[17\.5px\] {
+  font-size: 17.5px;
+}
+.text-\[25px\] {
+  font-size: 25px;
+}
+.text-\[27px\] {
+  font-size: 27px;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -1215,6 +1253,12 @@ video {
 }
 .leading-normal {
   line-height: 1.5;
+}
+.leading-\[18px\] {
+  line-height: 18px;
+}
+.leading-\[12px\] {
+  line-height: 12px;
 }
 .tracking-\[0\.16px\] {
   letter-spacing: 0.16px;
@@ -1651,6 +1695,14 @@ body {
     max-width: 477px;
   }
 
+  .md\:max-w-\[380px\] {
+    max-width: 380px;
+  }
+
+  .md\:max-w-\[250px\] {
+    max-width: 250px;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1708,6 +1760,16 @@ body {
     padding-bottom: 125px;
   }
 
+  .md\:px-\[16px\] {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .md\:py-\[8px\] {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
   .md\:pb-\[100px\] {
     padding-bottom: 100px;
   }
@@ -1760,6 +1822,18 @@ body {
     font-size: 48px;
   }
 
+  .md\:text-\[40px\] {
+    font-size: 40px;
+  }
+
+  .md\:text-\[12px\] {
+    font-size: 12px;
+  }
+
+  .md\:text-\[15px\] {
+    font-size: 15px;
+  }
+
   .md\:leading-\[24px\] {
     line-height: 24px;
   }
@@ -1774,6 +1848,18 @@ body {
 
   .md\:leading-\[43\.776px\] {
     line-height: 43.776px;
+  }
+
+  .md\:leading-\[12px\] {
+    line-height: 12px;
+  }
+
+  .md\:leading-\[20px\] {
+    line-height: 20px;
+  }
+
+  .md\:leading-\[18px\] {
+    line-height: 18px;
   }
 
   .md\:tracking-\[0\.12px\] {
@@ -1967,6 +2053,10 @@ body {
 
   .lg\:leading-\[61\.104px\] {
     line-height: 61.104px;
+  }
+
+  .lg\:leading-normal {
+    line-height: 1.5;
   }
 
   .lg\:tracking-\[0\.64px\] {

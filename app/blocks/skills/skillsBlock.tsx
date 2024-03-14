@@ -2,20 +2,65 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
+import gsap from 'gsap';
+import SplitType from 'split-type';
 
 function SkillsBlock( {
 } ) {
     const [hovered1, sethovered1] = useState( false );
     const [hovered2, sethovered2] = useState( false );
     const [hovered3, sethovered3] = useState( false );
+
+    useEffect( () => {
+
+        new SplitType( '#aboutsplit' );
+        gsap.from( '#aboutsplit .char', {
+            y: -10,
+            stagger: 0.02,
+            delay: 0.02,
+            duration: .1,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.jm-b-skill-sections',
+                start: 'top+=75px center',
+                end: 'top+=85px center',
+            },
+        } );
+        gsap.set( '.jm-b-skill-sections .description', {opacity: 0} );
+        gsap.to( '.jm-b-skill-sections .description', {
+            opacity: 1,
+            delay: 0.2,
+            scrollTrigger: {
+                trigger: '.jm-b-skill-sections',
+                start: 'top+=75px center',
+                end: 'top+=85px center',
+            },
+        } );
+        
+        const list = document.querySelectorAll( '.skill-icon-list-container ul li' );
+        gsap.utils.toArray( list ).forEach( function ( g ) {
+            gsap.set( g as HTMLElement, {opacity:0, x:100} );
+            gsap.to( g as HTMLElement, {
+                opacity: 1,
+                x:0,
+                stagger: 4,
+                scrollTrigger: {
+                    trigger: g as HTMLElement,
+                    start: 'top center',
+                    end: 'top center',
+                },
+            } );
+        } );
+    
+      }, [] );
     return (
         <>
             <div className='jm-b-skill-sections color bg-white relative  mx-auto' data-color='#FFFFFF' >
                 <div className="container max-w-[1144px] align-middle justify-between z-2 py-[80px] md:py-[100px] grid grid-cols-1 md:grid-cols-2 relative gap-x-6 gap-y-6 md:gap-y-0">
                     <div className="text-container-wrapper relative">
                         <div className="text-container md:sticky md:top-[100px]">
-                            <h4 className='font-oswald text-[24px] lg:text-[40px] lg:tracking-[1px] text-dark-blue-05'>WHAT I REALLY LOVE TO DO.</h4>
-                            <p className='text-dark-blue-05 mt-4 font-lato text-[12px] md:text-[14px] lg:text-[20px] tracking-[0.4px]'>I&apos;m Jun Mar Manuel, a skilled front-end developer with a passion for creating clean and user-friendly websites. I specialize in creating visually appealing designs with a focus on functionality and accessibility.</p>
+                            <h4 className='font-oswald text-[24px] lg:text-[40px] lg:tracking-[1px] text-light-blue-05 ' id='aboutsplit'>WHAT I REALLY LOVE TO DO.</h4>
+                            <p className='text-dark-blue-05 description mt-4 font-lato text-[12px] md:text-[14px] lg:text-[20px] tracking-[0.4px]'>I&apos;m Jun Mar Manuel, a skilled front-end developer with a passion for creating clean and user-friendly websites. I specialize in creating visually appealing designs with a focus on functionality and accessibility.</p>
                             <ul className='mt-4 relative'>
                                 <li className={`absolute top-0 hello ${hovered1 ? ' opacity-100' : ' opacity-0 '} transform transition-all hidden lg:block`} id='image-1'>
                                     <ul className='flex gap-4 flex-wrap'>
