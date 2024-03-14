@@ -843,20 +843,14 @@ video {
 .max-w-\[170px\] {
   max-width: 170px;
 }
-.max-w-\[296px\] {
-  max-width: 296px;
+.max-w-\[256px\] {
+  max-width: 256px;
 }
 .max-w-\[351px\] {
   max-width: 351px;
 }
 .max-w-full {
   max-width: 100%;
-}
-.max-w-\[276px\] {
-  max-width: 276px;
-}
-.max-w-\[256px\] {
-  max-width: 256px;
 }
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
@@ -1081,6 +1075,10 @@ video {
 .p-6 {
   padding: 1.5rem;
 }
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1100,6 +1098,10 @@ video {
 .px-\[28px\] {
   padding-left: 28px;
   padding-right: 28px;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .py-2 {
   padding-top: 0.5rem;
@@ -1129,16 +1131,8 @@ video {
   padding-top: 80px;
   padding-bottom: 80px;
 }
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-.pb-\[268px\] {
-  padding-bottom: 268px;
+.pb-\[150px\] {
+  padding-bottom: 150px;
 }
 .pb-\[32px\] {
   padding-bottom: 32px;
@@ -1182,8 +1176,8 @@ video {
 .text-\[14px\] {
   font-size: 14px;
 }
-.text-\[15px\] {
-  font-size: 15px;
+.text-\[16\.5px\] {
+  font-size: 16.5px;
 }
 .text-\[16px\] {
   font-size: 16px;
@@ -1197,6 +1191,9 @@ video {
 .text-\[24px\] {
   font-size: 24px;
 }
+.text-\[27px\] {
+  font-size: 27px;
+}
 .text-\[32px\] {
   font-size: 32px;
 }
@@ -1208,30 +1205,6 @@ video {
 }
 .text-\[9px\] {
   font-size: 9px;
-}
-.text-\[18px\] {
-  font-size: 18px;
-}
-.text-\[28px\] {
-  font-size: 28px;
-}
-.text-\[16\.5px\] {
-  font-size: 16.5px;
-}
-.text-\[15\.5px\] {
-  font-size: 15.5px;
-}
-.text-\[10\.5px\] {
-  font-size: 10.5px;
-}
-.text-\[17\.5px\] {
-  font-size: 17.5px;
-}
-.text-\[25px\] {
-  font-size: 25px;
-}
-.text-\[27px\] {
-  font-size: 27px;
 }
 .font-bold {
   font-weight: 700;
@@ -1253,12 +1226,6 @@ video {
 }
 .leading-normal {
   line-height: 1.5;
-}
-.leading-\[18px\] {
-  line-height: 18px;
-}
-.leading-\[12px\] {
-  line-height: 12px;
 }
 .tracking-\[0\.16px\] {
   letter-spacing: 0.16px;
@@ -1506,7 +1473,7 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-  body {
+  main {
     overflow-x: hidden !important;
   }
 }
@@ -1671,8 +1638,12 @@ body {
     width: 100%;
   }
 
-  .md\:max-w-\[275px\] {
-    max-width: 275px;
+  .md\:max-w-\[250px\] {
+    max-width: 250px;
+  }
+
+  .md\:max-w-\[380px\] {
+    max-width: 380px;
   }
 
   .md\:max-w-\[400px\] {
@@ -1683,24 +1654,12 @@ body {
     max-width: 419px;
   }
 
-  .md\:max-w-\[444px\] {
-    max-width: 444px;
-  }
-
   .md\:max-w-\[470px\] {
     max-width: 470px;
   }
 
   .md\:max-w-\[477px\] {
     max-width: 477px;
-  }
-
-  .md\:max-w-\[380px\] {
-    max-width: 380px;
-  }
-
-  .md\:max-w-\[250px\] {
-    max-width: 250px;
   }
 
   .md\:grid-cols-2 {
@@ -1740,9 +1699,9 @@ body {
     padding: 40px;
   }
 
-  .md\:px-\[22px\] {
-    padding-left: 22px;
-    padding-right: 22px;
+  .md\:px-\[16px\] {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .md\:py-\[100px\] {
@@ -1750,19 +1709,9 @@ body {
     padding-bottom: 100px;
   }
 
-  .md\:py-\[10px\] {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
   .md\:py-\[125px\] {
     padding-top: 125px;
     padding-bottom: 125px;
-  }
-
-  .md\:px-\[16px\] {
-    padding-left: 16px;
-    padding-right: 16px;
   }
 
   .md\:py-\[8px\] {
@@ -1772,6 +1721,10 @@ body {
 
   .md\:pb-\[100px\] {
     padding-bottom: 100px;
+  }
+
+  .md\:pb-\[218px\] {
+    padding-bottom: 218px;
   }
 
   .md\:pl-1 {
@@ -1798,6 +1751,10 @@ body {
     font-size: 14px;
   }
 
+  .md\:text-\[15px\] {
+    font-size: 15px;
+  }
+
   .md\:text-\[16px\] {
     font-size: 16px;
   }
@@ -1818,24 +1775,16 @@ body {
     font-size: 29px;
   }
 
-  .md\:text-\[48px\] {
-    font-size: 48px;
-  }
-
   .md\:text-\[40px\] {
     font-size: 40px;
   }
 
-  .md\:text-\[12px\] {
-    font-size: 12px;
+  .md\:leading-\[12px\] {
+    line-height: 12px;
   }
 
-  .md\:text-\[15px\] {
-    font-size: 15px;
-  }
-
-  .md\:leading-\[24px\] {
-    line-height: 24px;
+  .md\:leading-\[18px\] {
+    line-height: 18px;
   }
 
   .md\:leading-\[25\.536px\] {
@@ -1848,18 +1797,6 @@ body {
 
   .md\:leading-\[43\.776px\] {
     line-height: 43.776px;
-  }
-
-  .md\:leading-\[12px\] {
-    line-height: 12px;
-  }
-
-  .md\:leading-\[20px\] {
-    line-height: 20px;
-  }
-
-  .md\:leading-\[18px\] {
-    line-height: 18px;
   }
 
   .md\:tracking-\[0\.12px\] {

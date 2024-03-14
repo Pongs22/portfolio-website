@@ -9,19 +9,19 @@ function NavigationBar( {
   const [preventScroll, setpreventScroll] = useState( false );
   useEffect( () => {
    
-    const mains = document.querySelector( 'main' );
-  
-    if ( preventScroll ) {
-      if( mains ){
+    const mains = document.querySelector( 'body' );
+    if( mains ){
+      if ( preventScroll ) {
       mains.classList.add( 'overflow-hidden' );
     }
-    }
     else {
-      if( mains ){
       mains.classList.remove( 'overflow-hidden' );
-      }
     }
-
+    return () => {
+      mains.classList.remove( 'overflow-hidden' );
+      mains.classList.add( 'overflow-x-hidden' );
+    };
+  }
     const handleResize = () => {
       setpreventScroll( false );
     };

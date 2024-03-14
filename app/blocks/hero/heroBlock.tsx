@@ -63,7 +63,7 @@ function HeroBlock( {
       const { top } = section.getBoundingClientRect();
       window.scrollTo( {
         behavior: 'smooth',
-        top: top + window.scrollY + 100,
+        top: top + window.scrollY,
       } );
     }
   };
