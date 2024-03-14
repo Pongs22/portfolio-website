@@ -53,9 +53,25 @@ function HeroBlock( {
       opacity: 1,
       stagger: 4,
     } );
-  
+
 
   }, [] );
+
+  const scrollToSection = ( sectionId: string ) => {
+    const section = document.querySelector( sectionId );
+    if ( section ) {
+      const { top } = section.getBoundingClientRect();
+      window.scrollTo( {
+        behavior: 'smooth',
+        top: top + window.scrollY + 100,
+      } );
+    }
+  };
+
+  const handleClick = ( sectionId: string ) => {
+    scrollToSection( sectionId );
+  };
+
   return (
     <>
       <div className='jm-b-hero-sections bg-dark-blue-05 flex lg:pb-[185px] md:pb-[100px] pb-[50px] relative overflow-hidden justify-center text-center '>
@@ -71,7 +87,7 @@ function HeroBlock( {
             <h1 className='font-oswald  text-[27px] md:text-[40px] tracking-[0.512px] leading-[29.184px] md:leading-[43.776px] md:tracking-[0.768px] lg:text-[67px] text-white lg:leading-[61.104px] lg:tracking-[1.072px] ' id='splitText'>FRONT END <span className='text-light-blue-05'>DEVELOPER</span>  <br></br> <span className='text-[16.5px] tracking-[0.536px] md:text-[24px] md:tracking-[0.798px] lg:text-[41px] leading-normal lg:tracking-[1.128px]'>AND I <span className='text-light-blue-05'>LOVE</span> DEVELOPING YOUR IDEAS</span></h1>
             <div className="button-container flex justify-between mt-4">
               <p className='max-w-[170px] tracking-[0.1px] md:max-w-[250px] lg:max-w-[335px] text-left text-[10px] md:text-[14px] lg:text-[20px] text-light-gray-01 font-normal font-lato md:leading-[18px] lg:leading-normal'>I am skilled in building and designing things for the web. Currently working web-based projects at Greydient Lab.</p>
-              <button id="workshead" className='px-2 py-1 md:px-[16px] md:py-[8px] lg:px-[47px] md:leading-[12px] lg:py-[19px] bg-light-orange-05 hover:bg-light-orange-03 transform transition-all text-white font-oswald text-[12px] md:text-[15px] lg:text-[24px] font-semibold rounded-[4px]'>View Projects</button>
+              <button id="workshead" className='px-2 py-1 md:px-[16px] md:py-[8px] lg:px-[47px] md:leading-[12px] lg:py-[19px] bg-light-orange-05 hover:bg-light-orange-03 transform transition-all text-white font-oswald text-[12px] md:text-[15px] lg:text-[24px] font-semibold rounded-[4px]' onClick={() => handleClick( '#works' )}>View Projects</button>
             </div>
           </div>
           <div className="max-w-[1144px] mx-auto mt-20 lottie"><Lottie animationData={groovyWalkAnimation} /></div>
