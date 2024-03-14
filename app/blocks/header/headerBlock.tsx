@@ -96,45 +96,45 @@ function NavigationBar( {
             <li className='flex mx-auto'><button className='font-oswald px-4 py-3 bg-light-orange-05 hover:bg-light-orange-03 transform transition-all text-white tracking-[1.04px] rounded-[4px]' onClick={() => handleClick( '#contact' )}>Download CV</button></li>
           </ul>
           <ul className='flex gap-x-[36px] my-auto mx-auto align-middle justify-center'>
-            <li >
-              <p className='sr-only'>
+          <li>
+            <p className='sr-only'>
                 Linkedin</p>
-              <Link href={'#'} >
+            <Link href={'https://www.linkedin.com/in/jun-mar-manuel-6899a9228/'} target='_blank'>
                 <Image
-                  src='/assets/linked-in-icon.svg'
-                  alt='hero-image'
-                  width={36}
-                  height={36}
-                  sizes='100vw'
-                  className=' mx-auto my-auto transition-all'
+                    src='/assets/linked-in-icon.svg'
+                    alt='hero-image'
+                    width={36}
+                    height={36}
+                    sizes='100vw'
+                    className=' mx-auto my-auto grayscale hover:grayscale-0 transition-all'
                 />
-              </Link>
-            </li>
+            </Link>
+          </li>
             <li>
-              <p className='sr-only'>GitHub</p>
-              <Link href={'#'} >
-                <Image
-                  src='/assets/git-hub-icon.svg'
-                  alt='hero-image'
-                  width={36}
-                  height={36}
-                  sizes='100vw'
-                  className=' mx-auto my-auto transition-all'
-                />
-              </Link>
+                <p className='sr-only'>GitHub</p>
+                <Link href={'https://github.com/Pongs22'} target='_blank' >
+                    <Image
+                        src='/assets/git-hub-icon.svg'
+                        alt='hero-image'
+                        width={36}
+                        height={36}
+                        sizes='100vw'
+                        className=' mx-auto my-auto grayscale hover:grayscale-0 transition-all'
+                    />
+                </Link>
             </li>
             <li className=''>
-              <p className='sr-only'>Facebook</p>
-              <Link href={'#'}>
-                <Image
-                  src='/assets/facebook-icon.svg'
-                  alt='hero-image'
-                  width={36}
-                  height={36}
-                  sizes='100vw'
-                  className=' mx-auto my-auto transition-all'
-                />
-              </Link>
+                <p className='sr-only'>Facebook</p>
+                <Link href={'https://www.facebook.com/junmarm'} target='_blank'>
+                    <Image
+                        src='/assets/facebook-icon.svg'
+                        alt='hero-image'
+                        width={36}
+                        height={36}
+                        sizes='100vw'
+                        className=' mx-auto my-auto grayscale hover:grayscale-0 transition-all'
+                    />
+                </Link>
             </li>
           </ul>
         </div>

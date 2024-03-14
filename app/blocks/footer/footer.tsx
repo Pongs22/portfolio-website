@@ -69,7 +69,7 @@ function FooterBlock( {
                             <p className='font-lato text-[12px] md:text-[16px] lg:leading-[25px]'>While I&apos;m not actively seeking new job at the moment, I am very happy to respond to your messages or even have a tea with you. </p>
                         </div>
                         <div className="button-container md:my-auto mt-3 py-2">
-                            <Link href='#' className='py-2 px-4 lg:py-[12px] lg:px-[27px] my-auto font-oswald md:text-[16px] md:tracking-[1.12px] lg:text-[24px] font-semibold bg-light-orange-05 hover:bg-light-orange-03 transform transition-all rounded-[4px]'>Send a Message</Link>
+                            <Link href='mailto:junmarm18@gmail.com' className='py-2 px-4 lg:py-[12px] lg:px-[27px] my-auto font-oswald md:text-[16px] md:tracking-[1.12px] lg:text-[24px] font-semibold bg-light-orange-05 hover:bg-light-orange-03 transform transition-all rounded-[4px]'>Send a Message</Link>
                         </div>
                     </div>
                 </div>
@@ -127,7 +127,7 @@ function FooterBlock( {
                             <li>
                                 <p className='sr-only'>
                                     Linkedin</p>
-                                <Link href={'#'} >
+                                <Link href={'https://www.linkedin.com/in/jun-mar-manuel-6899a9228/'} target='_blank'>
                                     <Image
                                         src='/assets/linked-in-icon.svg'
                                         alt='hero-image'
@@ -140,7 +140,7 @@ function FooterBlock( {
                             </li>
                             <li>
                                 <p className='sr-only'>GitHub</p>
-                                <Link href={'#'} >
+                                <Link href={'https://github.com/Pongs22'} target='_blank' >
                                     <Image
                                         src='/assets/git-hub-icon.svg'
                                         alt='hero-image'
@@ -153,7 +153,7 @@ function FooterBlock( {
                             </li>
                             <li className=''>
                                 <p className='sr-only'>Facebook</p>
-                                <Link href={'#'}>
+                                <Link href={'https://www.facebook.com/junmarm'} target='_blank'>
                                     <Image
                                         src='/assets/facebook-icon.svg'
                                         alt='hero-image'
