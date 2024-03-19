@@ -1,14 +1,12 @@
 import { cookies } from "next/headers";
-import { jwtDecode } from "jwt-decode";
-interface JwtPayload {
-    name: string;
-}
+
+
 
 export async function login( formData: FormData ) {
     const username = formData.get( 'username' );
     const password = formData.get( 'password' );
 
-    const tokenResponse = await fetch('http://jm-portfolio.local/wp-json/api/v1/token', {
+    const tokenResponse = await fetch(`${process.env.WORDPRESS_API_URL}/api/v1/token`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify( { username, password } ),
@@ -21,7 +19,7 @@ export async function login( formData: FormData ) {
 
     const { jwt_token } = await tokenResponse.json();
 
-    const validateResponse = await fetch( 'http://jm-portfolio.local/wp-json/api/v1/token-validate', {
+    const validateResponse = await fetch( `${process.env.WORDPRESS_API_URL}/api/v1/token-validate`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -30,8 +28,8 @@ export async function login( formData: FormData ) {
     });
 
     if ( validateResponse.ok ) {
-        const decodedHeader = jwtDecode(jwt_token) as JwtPayload;
-        const setcookies = cookies().set('session', decodedHeader.name , { httpOnly: true });
+
+        const setcookies = cookies().set('session', jwt_token , { httpOnly: true });
     }
 }
 

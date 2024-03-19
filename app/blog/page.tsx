@@ -1,6 +1,11 @@
 import { getSession } from '../lib/action'
 import { redirect } from 'next/navigation'
 import { logout } from '../lib/action'
+import { jwtDecode } from "jwt-decode";
+
+interface JwtPayload {
+    name: string;
+}
 
 export default async function Page() {
     const session = await getSession();
@@ -12,8 +17,17 @@ export default async function Page() {
         await logout(formData);
         redirect('/');
     }
+
+    const decodedHeader = jwtDecode(session) as JwtPayload;
     try {
-        const res = await fetch(`https://greydientlab.site/component-library/wp-json/wp/v2/posts`);
+
+        const res = await fetch(`${process.env.WORDPRESS_API_URL}/wp/v2/posts`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${session}`,
+            },
+        });
         if (!res.ok) {
             throw new Error(`Failed to fetch posts: ${res.status} ${res.statusText}`);
         }
@@ -22,7 +36,7 @@ export default async function Page() {
             <>
                 <div className="container">
                     <div>
-                        <h1 className='text-dark-blue-05 font-oswald text-[70px]'>Good Day {session}</h1>
+                        <h1 className='text-dark-blue-05 font-oswald text-[70px]'>Good Day {decodedHeader.name}</h1>
                     </div>
                     <div>
                         <p className='text-dark-blue-05 font-oswald text-[40px] font-bold'>Articles in GL Component Library</p>
