@@ -1,5 +1,38 @@
 {
-  "node": {},
+  "node": {
+    "2e7216faf2778f335c24ad3b415a351f589e55c2": {
+      "workers": {
+        "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CAcer%5C%5CDesktop%5C%5Cportfolio-website%5C%5Capp%5C%5Clogin%5C%5Cpage.tsx%22%2C%5B%22%24%24ACTION_1%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/login/page": "rsc"
+      }
+    },
+    "ab9e62f1f8bb37e55c0b1b59c119ad655ce304dc": {
+      "workers": {
+        "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CAcer%5C%5CDesktop%5C%5Cportfolio-website%5C%5Capp%5C%5Clogin%5C%5Cpage.tsx%22%2C%5B%22%24%24ACTION_1%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/login/page": "rsc"
+      }
+    },
+    "41b3b299b57ebc590b6182be0409a42e43640f67": {
+      "workers": {
+        "app/login/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CAcer%5C%5CDesktop%5C%5Cportfolio-website%5C%5Capp%5C%5Clogin%5C%5Cpage.tsx%22%2C%5B%22%24%24ACTION_1%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/login/page": "rsc"
+      }
+    },
+    "2b0af59db1d6440ac0285da9b5f6bf5bbbeae2c4": {
+      "workers": {
+        "app/blog/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5CAcer%5C%5CDesktop%5C%5Cportfolio-website%5C%5Capp%5C%5Cblog%5C%5Cpage.tsx%22%2C%5B%22%24%24ACTION_1%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/blog/page": "rsc"
+      }
+    }
+  },
   "edge": {},
-  "encryptionKey": "PLl6YCy21QvHSJlfXjG7qAH961r9Pdpi3gba0fmh/qY="
+  "encryptionKey": "ZWRskbsf0bSFCDy1yfCdLXRWQw5iz4B582U59hpMGVE="
 }

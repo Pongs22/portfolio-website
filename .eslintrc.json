@@ -1,9 +1,9 @@
 {
     "extends": "next/core-web-vitals",
     "rules": {
-        "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
-        "space-in-parens": ["error", "always"],
-        "no-whitespace-before-property": "error",
-        "quotes": "off",
-        "eol-last": ["error", "always"]
+        // "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
+        // "space-in-parens": ["error", "always"],
+        // "no-whitespace-before-property": "error",
+        // "quotes": "off",
+        // "eol-last": ["error", "always"]
       } }

@@ -58,6 +58,7 @@ function NavigationBar( {
             /></div>
           <div className="menu-container align-middle justify-center my-auto hidden md:block">
             <ul className='flex gap-x-[75px] my-auto align-middle justify-center [&>li]:my-auto [&>li]:font-lato [&>li]:text-[14px]'>
+            <li><Link href={'/login'} className='tracking-[1.4px] font-bold hover:text-light-blue-05 transition-all' >Login</Link></li>
               <li><button className='tracking-[1.4px] font-bold hover:text-light-blue-05 transition-all' onClick={() => handleClick( '#works' )} >Works</button></li>
               <li><button className='tracking-[1.4px] font-bold hover:text-light-blue-05 transition-all' onClick={() => handleClick( '#about' )}>About</button></li>
               <li><button className='font-oswald px-4 py-3 bg-light-orange-05 hover:bg-light-orange-03 transform transition-all text-white tracking-[1.04px] rounded-[4px]' onClick={() => handleClick( '#contact' )}>CONTACT ME</button></li>
