@@ -1,7 +1,6 @@
 import { getSession } from '../lib/action'
 import { redirect } from 'next/navigation'
 import { logout } from '../lib/action'
-import jwt_decode from "jwt-decode";
 
 export default async function Page() {
     const session = await getSession();
@@ -14,7 +13,7 @@ export default async function Page() {
         redirect('/');
     }
     try {
-        const res = await fetch(`${process.env.WORDPRESS_API_URL}/posts`);
+        const res = await fetch(`https://greydientlab.site/component-library/wp-json/wp/v2/posts`);
         if (!res.ok) {
             throw new Error(`Failed to fetch posts: ${res.status} ${res.statusText}`);
         }

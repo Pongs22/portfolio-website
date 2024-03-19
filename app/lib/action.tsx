@@ -1,26 +1,17 @@
 import { cookies } from "next/headers";
-import { jwtVerify } from "jose";
-
-
-const secretKey = 'secret';
-const key = new TextEncoder().encode(secretKey);
-
-export async function decrypt(input: string) {
-    const { payload } = await jwtVerify(input, key, {
-        algorithms: ['HS256'],
-        typ: "JWT"
-    });
-    return payload;
+import { jwtDecode } from "jwt-decode";
+interface JwtPayload {
+    name: string;
 }
 
-export async function login(formData: FormData) {
-    const username = formData.get('username');
-    const password = formData.get('password');
+export async function login( formData: FormData ) {
+    const username = formData.get( 'username' );
+    const password = formData.get( 'password' );
 
-    const tokenResponse = await fetch('https://greydientlab.site/component-library/wp-json/api/v1/token', {
+    const tokenResponse = await fetch('http://jm-portfolio.local/wp-json/api/v1/token', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify( { username, password } ),
     });
 
     if (!tokenResponse.ok) {
@@ -30,7 +21,7 @@ export async function login(formData: FormData) {
 
     const { jwt_token } = await tokenResponse.json();
 
-    const validateResponse = await fetch('https://greydientlab.site/component-library/wp-json/api/v1/token-validate', {
+    const validateResponse = await fetch( 'http://jm-portfolio.local/wp-json/api/v1/token-validate', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -38,8 +29,9 @@ export async function login(formData: FormData) {
         },
     });
 
-    if (validateResponse.ok) {
-        const setcookies = cookies().set('session', jwt_token, { httpOnly: true });
+    if ( validateResponse.ok ) {
+        const decodedHeader = jwtDecode(jwt_token) as JwtPayload;
+        const setcookies = cookies().set('session', decodedHeader.name , { httpOnly: true });
     }
 }
 
@@ -47,7 +39,7 @@ export async function login(formData: FormData) {
 export async function getSession() {
 
     const session = cookies().get('session')?.value;
-    if (!session) { return null };
+    if ( !session ) { return null };
     return session;
 }
 
