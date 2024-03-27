@@ -10,7 +10,7 @@ interface JwtPayload {
 export default async function Page() {
     const session = await getSession();
     if (!session) {
-        redirect('/login');
+        return null;
     }
     const onLogout = async (formData: FormData) => {
         "use server"
@@ -36,7 +36,7 @@ export default async function Page() {
             <>
                 <div className="container">
                     <div>
-                        <h1 className='text-dark-blue-05 font-oswald text-[70px]'>Good Day {decodedHeader.name}</h1>
+                        <h1 className='text-dark-blue-05 font-oswald text-[70px]'>Good Day User {decodedHeader.name}</h1>
                     </div>
                     <div>
                         <p className='text-dark-blue-05 font-oswald text-[40px] font-bold'>Articles in GL Component Library</p>

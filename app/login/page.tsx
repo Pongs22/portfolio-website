@@ -1,6 +1,6 @@
-import Link from 'next/link';
+
 import { login } from '../lib/action'
-import { RedirectType, redirect } from 'next/navigation';
+import { redirect } from 'next/navigation';
 import Image from 'next/image';
 
 
@@ -9,7 +9,7 @@ export default async function LoginPage() {
     const onLogin = async (formData: FormData) => {
         "use server"
         await login(formData);
-        redirect('/blog');
+        redirect('/login');
     }
 
     return (
